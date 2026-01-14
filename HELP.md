@@ -13,7 +13,7 @@ This script is designed to showcase my beginnings with Lua and GameGuardian scri
 
 ## Help
 - This script has name protection and update protection heres how to patch for testing ->
-- Name protection (located @line 5667) (Here name should work but if you plan to change change this line and rename file accordingly)
+- Name protection (located @line 5667) (Here name should work but if you plan to change file name, change this line and rename file accordingly.)
 - detector = gg.getFile():match('[^/]+$')  
 name = "_CPMGARAGEULTIMATE.lua" 
 
