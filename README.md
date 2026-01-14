@@ -1,7 +1,5 @@
 # GameGuardian Lua Script 🔧
 
-![GG Scripts Banner](https://via.placeholder.com/800x150/000000/ffffff?text=GameGuardian+6k+Scripts)
-
 ![Lua](https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white)
 
 Welcome to my beginnings in Lua scripting and reverse engineering. This repository contains my early GameGuardian script, created for research, learning, and personal development.  
@@ -26,7 +24,7 @@ This script marks my starting point in tool development, automation, and reverse
 ---
 
 ## 📂 File Structure
-- /scripts           # Main Lua scripts
+- /script           # Main Lua script
 - /docs              # Documentation & usage
 - /examples          # Sample configurations
 
