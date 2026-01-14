@@ -48,6 +48,9 @@ Check it out: [CPMGARAGESTUDIOS](https://cpmgarage.github.io/cpmgaragestudios/)
 
 *Note: The site is still in development, mostly a old passion project but it gives a good idea of the tools and projects I’m working on.*
 - Here are a few snapshots of my modding platform and available templates:
+![Login](screenshots/login-boot.png)
+![IDE](screenshots/lua-ide.png)
+![Generator](screenshots/script-generator.png)
 
 
 ## 🌐 Contact
