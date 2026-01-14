@@ -1,3 +1,13 @@
+--[[
+Gameguardian Lua Script
+Author: Ethan (github.com/ethanlabs101 or on Instagram @_cpmgarage)
+Purpose: Research & Educational exploration of lua scripting and memory modification.
+Note: This script represents my early work and learning phase.
+Disclaimer: Please use responsibly and at your own risk!
+Enjoy! Much Love <3.
+]]
+
+
 -- Username
 local username = "❄️CPMGARAGE❄️" -- Manually input name (11 characters)
 
