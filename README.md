@@ -4,13 +4,13 @@
 
 Welcome to my beginnings in Lua scripting and reverse engineering. This repository contains my early GameGuardian script, created for research, learning, and personal development.  
 
-> ⚠️ Disclaimer: Use for educational and research purposes only. I am not responsible for any misuse of these scripts.  
+> ⚠️ Disclaimer: Use for educational and research purposes only. I am not responsible for any misuse of this script.  
 
 ---
 
 ## 💻 About
 
-This script marks my starting point in tool development, automation, and reverse engineering on mobile games. They show practical Lua scripting, memory manipulation experiments, and my early approach to building custom tools.  
+This script marks my starting point in tool development, automation, and reverse engineering on mobile games. This shows practical Lua scripting, memory manipulation experiments, and my early approach to building custom tools.  
 
 -This script was created a few updates ago, functionality is not guaranteed. This scripts purpose is to document my technical growth and achievements, as well as be a research resource for lua script developers.
 
