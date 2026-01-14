@@ -27,9 +27,11 @@ This script marks my starting point in tool development, automation, and reverse
 
 ## 📂 File Structure
 -  README.md        # Readme page
-- /scripts          # Lua scripts
+-  /script          # Main Lua script
 -  ABOUT.md         # Basic Description / Help
 -  LICENSE          # MIT License
+-  /templates       # GG Lua Templates
+-  /screenshots     # Pictures of Website
 
 ---
 
@@ -45,6 +47,7 @@ I also maintain a modding website where I host scripts, tools, and resources for
 Check it out: [CPMGARAGESTUDIOS](https://cpmgarage.github.io/cpmgaragestudios/)  
 
 *Note: The site is still in development, mostly a old passion project but it gives a good idea of the tools and projects I’m working on.*
+Here are a few snapshots of my modding platform and available templates:
 
 
 ## 🌐 Contact
