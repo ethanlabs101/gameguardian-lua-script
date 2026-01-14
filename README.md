@@ -24,9 +24,9 @@ This script marks my starting point in tool development, automation, and reverse
 ---
 
 ## 📂 File Structure
+- /README.md        # Readme page
 - /script           # Main Lua script
-- /docs              # Documentation & usage
-- /examples          # Sample configurations
+- /ABOUT.md         # Basic Description / Help
 
 ---
 
