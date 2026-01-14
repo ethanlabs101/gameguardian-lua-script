@@ -26,6 +26,7 @@ local expectedGameVersions = { "4.9.4" } -- Add multiple versions
 - The comments should help understand the flow of how a Lua Script is constructed.
 - I reccomend starting with the skeleton template in the IDE to see how a Script is structured, and slowly add mods and personalization.
 - Feel Free to reach out for any questions! (Contacts in README.md)
+- Also in the templates folder of this repo, check out the gg-template.lua (full script skeleton) and the gg-snippet (script function examples).
 
 
 ## Links
