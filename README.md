@@ -26,10 +26,10 @@ This script marks my starting point in tool development, automation, and reverse
 ---
 
 ## 📂 File Structure
-- /README.md        # Readme page
-- /script           # Main Lua script
-- /ABOUT.md         # Basic Description / Help
-- /LICENSE          # MIT License
+-  README.md        # Readme page
+- /scripts          # Lua scripts
+-  ABOUT.md         # Basic Description / Help
+-  LICENSE          # MIT License
 
 ---
 
