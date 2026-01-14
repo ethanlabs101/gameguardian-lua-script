@@ -13,13 +13,13 @@ This script is designed to showcase my beginnings with Lua and GameGuardian scri
 
 ## Help
 - This script has name protection and update protection heres how to patch for testing ->
-- Name protection (located @line 5667)
+- Name protection (located @line 5667) (Here name should work but if you plan to change change this line and rename file accordingly)
 - detector = gg.getFile():match('[^/]+$')  
-name = "_CPMGARAGEULTIMATE.lua"  (Here name should work but if you plan to change change this line and rename file accordingly)
+name = "_CPMGARAGEULTIMATE.lua" 
 
-- Update protection (located @line 44)
+- Update protection (located @line 44) (Change Version number to current for testing)
 - -- Define the expected game versions
-local expectedGameVersions = { "4.9.4" } -- Add multiple versions (Change Version number to current for testing)
+local expectedGameVersions = { "4.9.4" } -- Add multiple versions
 
 
 ## Links
