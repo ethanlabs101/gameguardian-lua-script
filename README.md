@@ -10,7 +10,7 @@ Welcome to my beginnings in Lua scripting and reverse engineering. This reposito
 
 ## 💻 About
 
-These scripts mark my starting point in tool development, automation, and reverse engineering on mobile games. They show practical Lua scripting, memory manipulation experiments, and my early approach to building custom tools.  
+This script marks my starting point in tool development, automation, and reverse engineering on mobile games. They show practical Lua scripting, memory manipulation experiments, and my early approach to building custom tools.  
 
 ---
 
@@ -24,9 +24,9 @@ These scripts mark my starting point in tool development, automation, and revers
 ---
 
 ## 📂 File Structure
-/scripts           # Main Lua scripts
-/docs              # Documentation & usage
-/examples          # Sample configurations
+- /scripts           # Main Lua scripts
+- /docs              # Documentation & usage
+- /examples          # Sample configurations
 
 ---
 
