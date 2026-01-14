@@ -29,11 +29,12 @@ This script marks my starting point in tool development, automation, and reverse
 - /README.md        # Readme page
 - /script           # Main Lua script
 - /ABOUT.md         # Basic Description / Help
+- /LICENSE          # MIT License
 
 ---
 
 ## 🔗 Resources
-- [GameGuardian Official Website](https://gameguardian.net/)
+- Game Guardian: [GameGuardian Official Website](https://gameguardian.net/)
 - Lua language documentation: [https://www.lua.org/manual/5.1/](https://www.lua.org/manual/5.1/)
 
 ---
