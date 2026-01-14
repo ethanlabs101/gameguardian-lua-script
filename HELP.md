@@ -21,6 +21,12 @@ name = "_CPMGARAGEULTIMATE.lua"
 - -- Define the expected game versions
 local expectedGameVersions = { "4.9.4" } -- Add multiple versions
 
+## Extra
+- Check out my website in the README.md, this resource has a custom GG Lua IDE (coding interface) with broken down, injectable mods.
+- The comments should help understand the flow of how a Lua Script is constructed.
+- I reccomend starting with the skeleton template in the IDE to see how a Script is structured, and slowly add mods and personalization.
+- Feel Free to reach out for any questions! (Contacts in README.md)
+
 
 ## Links
 - Game Guardian: [GameGuardian](https://gameguardian.net/)
