@@ -32,6 +32,20 @@ This script marks my starting point in tool development, automation, and reverse
 
 ---
 
+## 🔗 Resources
+- [GameGuardian Official Website](https://gameguardian.net/)
+- Lua language documentation: [https://www.lua.org/manual/5.1/](https://www.lua.org/manual/5.1/)
+
+---
+
+## 🌐 Modding Website
+
+I also maintain a modding website where I host scripts, tools, and resources for learning and experimentation.  
+Check it out: [CPMGARAGESTUDIOS](https://cpmgarage.github.io/cpmgaragestudios/)  
+
+*Note: The site is still in development, mostly a old passion project but it gives a good idea of the tools and projects I’m working on.*
+
+
 ## 🌐 Contact
 
 [![GitHub](https://img.shields.io/badge/GitHub-ethanlabs101-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ethanlabs101)
