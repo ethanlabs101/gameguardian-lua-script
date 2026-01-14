@@ -12,7 +12,7 @@ Welcome to my beginnings in Lua scripting and reverse engineering. This reposito
 
 This script marks my starting point in tool development, automation, and reverse engineering on mobile games. They show practical Lua scripting, memory manipulation experiments, and my early approach to building custom tools.  
 
--This script was created a few updates ago, functionality is not guarenteed. This scripts purpose is to document my technical growth and achievements, as well as be a research resource.
+-This script was created a few updates ago, functionality is not guaranteed. This scripts purpose is to document my technical growth and achievements, as well as be a research resource for lua script developers.
 
 ---
 
