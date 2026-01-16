@@ -48,7 +48,7 @@ It is neither maintained nor recommended for use in live environments, and does 
 
 ## 📜 License
 
-Released under the MIT License — see ![LICENSE](https://github.com/ethanlabs101/gameguardian-lua-script/blob/main/LICENSE) for details.
+Released under the MIT License — see [LICENSE](https://github.com/ethanlabs101/gameguardian-lua-script/blob/main/LICENSE) for details.
 
 ---
 
