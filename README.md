@@ -54,9 +54,9 @@ I also developed a modding website where I host scripts, tools, and resources fo
 Check it out: [CPMGARAGESTUDIOS](https://cpmgarage.github.io/cpmgaragestudios/)  
 
 - **Here is also some direct links to tools inside the website:**
-[GG-IDE](https://cpmgarage.github.io/cpmgaragestudios/gg-ide.html)
-[SCRIPT-GENERATOR](https://cpmgarage.github.io/cpmgaragestudios/gg-writer.html)
-[LIGHT-LUA-ENC](https://cpmgarage.github.io/cpmgaragestudios/encrypt.html)
+- [GG-IDE](https://cpmgarage.github.io/cpmgaragestudios/gg-ide.html)
+- [SCRIPT-GENERATOR](https://cpmgarage.github.io/cpmgaragestudios/gg-writer.html)
+- [LIGHT-LUA-ENC](https://cpmgarage.github.io/cpmgaragestudios/encrypt.html)
 
 
 *Note: The site is still in development, mostly a old passion project but it gives a good idea of the tools and projects I’m working on.*
