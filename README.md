@@ -15,9 +15,9 @@ Welcome to my beginnings in Lua scripting and reverse engineering. This reposito
 
 This script marks my starting point in tool development, automation, and reverse engineering within mobile games. It demonstrates practical Lua scripting, memory experimentation, and my early approach to building structured custom tools.
 
--The project was developed on a non-root Samsung device, without Frida or dump.cs access. Working under these constraints forced me to think differently, strategize more carefully, and develop alternative problem-solving approaches that later shaped how I design tools and systems.
+- The project was developed on a non-root Samsung device, without Frida or dump.cs access. Working under these constraints forced me to think differently, strategize more carefully, and develop alternative problem-solving approaches that later shaped how I design tools and systems.
 
--This script was created a updates ago, functionality is not guaranteed. This repos purpose is to document my technical growth and achievements, as well as be a research resource for lua script developers.
+- This script was created updates ago, functionality is not guaranteed. This repos purpose is to document my technical growth and achievements, as well as be a research resource for lua script developers.
 
 ---
 
