@@ -32,7 +32,9 @@ This script marks my starting point in tool development, automation, and reverse
 
 ## 📂 File Structure
 -  README.md        # Readme page
--  /script          # Main Lua script
+-  /script          # Main Master Lua script
+-  /first-script    # First script ever!
+-  /delta-script    # Group only script
 -  ABOUT.md         # Basic Description / Help
 -  LICENSE          # MIT License
 -  /templates       # GG Lua Templates
