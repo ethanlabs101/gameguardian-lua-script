@@ -1,0 +1,3298 @@
+gg.setVisible(false)
+gg.toast('𝔻')
+gg.sleep(500)
+gg.toast('𝔻𝔼')
+gg.sleep(500)
+gg.toast('𝔻𝔼𝕃')
+gg.sleep(500)
+gg.toast('𝔻𝔼𝕃𝕋')
+gg.sleep(500)
+gg.toast('𝔻𝔼𝕃𝕋𝔸')
+gg.sleep(500)
+gg.toast('𝔻𝔼𝕃𝕋𝔸 𝕊')
+gg.sleep(500)
+gg.toast('𝔻𝔼𝕃𝕋𝔸 𝕊ℚ')
+gg.sleep(500)
+gg.toast('𝔻𝔼𝕃𝕋𝔸 𝕊ℚ𝕌')
+gg.sleep(500)
+gg.toast('𝔻𝔼𝕃𝕋𝔸 𝕊ℚ𝕌𝔸')
+gg.sleep(500)
+gg.toast('𝔻𝔼𝕃𝕋𝔸 𝕊ℚ𝕌𝔸𝔻')
+gg.sleep(500)
+gg.toast('𝔻𝔼𝕃𝕋𝔸 𝕊ℚ𝕌𝔸𝔻 ℂ')
+gg.sleep(500)
+gg.toast('𝔻𝔼𝕃𝕋𝔸 𝕊ℚ𝕌𝔸𝔻 ℂℙ')
+gg.sleep(500)
+gg.toast('👑𝔻𝔼𝕃𝕋𝔸 𝕊ℚ𝕌𝔸𝔻 ℂℙ𝕄👑')
+gg.sleep(2000)
+gg.alert('👑𝕋ℍ𝔸ℕ𝕂𝕊 𝔽𝕆ℝ 𝕌𝕊𝕀ℕ𝔾 𝕆𝕌ℝ 𝔽ℝ𝔼𝔼 𝕊ℂℝ𝕀ℙ𝕋👑')
+
+function getDate()
+    return os.date("%m/%d/%Y") -- Gets today's date (MM/DD/YYYY)
+end
+
+function getTime()
+    return os.date("%H:%M:%S") -- Gets real-time clock (HH:MM:SS)
+end 
+
+
+function waitForGG(returnTo)
+    while true do
+        if gg.isVisible(true) then
+            gg.setVisible(false)
+            if returnTo then
+                returnTo() -- Return to the correct menu
+            else
+                mainMenu() -- Default to Main Menu if nothing is passed
+            end
+            return -- Prevents infinite loop
+        end
+        gg.sleep(1000)
+    end
+end
+
+function mainMenu()
+    local menu = gg.choice({
+        '💰𝕄𝕆ℕ𝔼𝕐 𝕄𝔼ℕ𝕌',
+        '🪙ℂ𝕆𝕀ℕ 𝕄𝔼ℕ𝕌',
+        '🛠𝕊𝕌𝕊ℙ𝔼ℕ𝕊𝕀𝕆ℕ 𝕄𝔼ℕ𝕌',
+        '🏎ℙ𝔼ℝ𝔽𝕆ℝ𝕄𝔸ℕℂ𝔼 𝕄𝔼ℕ𝕌',
+        '🔧𝔹𝕆𝔻𝕐 𝕂𝕀𝕋 𝕄𝔼ℕ𝕌',
+        '✨️𝔾𝕃𝕆𝕎 𝕄𝔼ℕ𝕌',
+        '🏁ℝ𝔸ℂ𝔼 𝕄𝔼ℕ𝕌',
+        '🎁𝔼𝕏𝕋ℝ𝔸𝕊',
+        '👑𝕌ℕ𝕃𝕆ℂ𝕂 ℂℝ𝕆𝕎ℕ ℂ𝔸ℝ',
+        '📝𝕎𝕀ℕ𝔾 𝔸ℕ𝔻 ℝ𝕆𝕆𝔽 𝔽𝕀ℕ𝔻𝔼ℝ 𝕋𝕆𝕆𝕃',
+        '📌𝕀ℕ𝔽𝕆ℝ𝕄𝔸𝕋𝕀𝕆ℕ',
+        '❌️𝔼𝕏𝕀𝕋',
+        },nil,"👑𝔻𝔼𝕃𝕋𝔸 𝕊ℚ𝕌𝔸𝔻 ℂℙ𝕄👑 \n 𝙁𝙍𝙀𝙀 𝙑𝙀𝙍𝙎𝙄𝙊𝙉 ✔️   \n📅 " .. getDate() .. "  ⌚️ " .. getTime())
+    
+    if menu == nil then
+        gg.toast('𝕋𝔸ℙ 𝔾𝔾 𝕋𝕆 ℝ𝔼𝕋𝕌ℝℕ 𝕋𝕆 𝕄𝔸𝕀ℕ 𝕄𝔼ℕ𝕌')
+        waitForGG()
+        
+        elseif menu == 1 then
+        moneyMenu()
+        elseif menu == 2 then
+        coinMenu()
+        elseif menu == 3 then
+        suspensionMenu()
+        elseif menu == 4 then
+        hpMenu()
+        elseif menu == 5 then
+        bodyKitMenu()
+        elseif menu == 6 then
+        glowMenu()
+        elseif menu == 7 then
+        raceMenu()
+        elseif menu == 8 then
+        extrasMenu() 
+        elseif menu == 9 then
+        unlockCrown()
+        elseif menu == 10 then
+        wingRoofFinder()
+        elseif menu == 11 then
+        infoAlert()
+        elseif menu == 12 then
+gg.sleep(500)
+gg.toast('👑HAVE A GREAT DAY👑')
+gg.sleep(2000)
+
+       
+gg.alert([[
+₴₵Ɽł₱₮ ฿Ɏ _₵₱₥₲₳Ɽ₳₲Ɇ     D̲E̲L̲T̲A̲ ̲S̲Q̲U̲A̲D̲ ̲C̲P̲M̲
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⠀⣀⣠⣴⣾⡿⠟⢛⡿⠟⠛⠿⣯⡛⠉⠉⠛⠒⠀⠀
+⠀⠀⠀⣀⡤⠼⢛⣿⢿⣿⠟⠃⠀⠀⢸⡇⠀⠀⠀⠀⠻⡄⠀⠀⠀⠀⠀
+⠀⣠⣾⣭⣶⣶⣿⢱⠟⠁⠀⠀⠀⠀⠈⠻⠿⠛⠉⠉⠳⣽⠀⠀⠀⠀⠀
+⠞⠉⠀⠀⢠⡟⠃⠈⠀⠀⠀⠀⢀⣤⣶⣿⠇⠀⠀⠀⠀⡈⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣽⣷⣦⣠⣀⣤⠴⠿⠿⠟⠋⠀⠀⠀⠀⣼⡏⠙⢿⣿⠶⠄
+⠀⠀⠀⠀⠀⢈⡿⠏⢹⢹⠀⠀⠀⠀⠀⠀⠀⠀⣀⣾⠏⠀⣰⡿⠁⠀⠀
+⠀⠀⠀⠀⠀⣾⠁⢀⡾⠀⣷⠀⠀⣀⡴⣶⠞⠛⣿⡀⠀⣰⡏⠁⠀⠀⠀
+⠀⠀⠀⠀⠀⢾⠀⠀⠀⠀⠀⣠⣞⠙⢁⣿⠀⠐⢿⡆⢠⣿⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠈⢷⣴⡶⠶⢿⡅⠉⠀⢀⡿⠀⠐⢾⡇⢰⣟⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠙⠀⠀⠀⠁⠀⡄⢠⡇⢠⣤⣾⠃⠘⣷⠀⠀⠀⠀⠀
+⠀     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⠛⠛⠛⠀⠀⢹⣦⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠶⠶⠶⠟⠛⠉⠀⠀⠀⠀
+]])
+        
+
+
+print("👑DELTA SQUAD CPM👑")
+print("script by IG: _cpmgarage")
+os.exit()
+   end
+ end
+
+function moneyMenu()
+    gg.alert('💰𝕎𝔼𝕃ℂ𝕆𝕄𝔼 𝕋𝕆 𝕄𝕆ℕ𝔼𝕐 𝕄𝔼ℕ𝕌💰\n ℝ𝔼𝕊𝔼𝕋 𝔾𝔾 + 𝔾𝔸𝕄𝔼 𝔸𝔽𝕋𝔼ℝ 𝔼𝔸ℂℍ 𝕄𝕆ℕ𝔼𝕐 ℍ𝔸ℂ𝕂')
+ while true do 
+ local choice=gg.choice({'❌️ℝ𝔼𝕊𝔼𝕋 ℂ𝔸𝕊ℍ','👑𝟝𝟘𝕄 ℂ𝔸𝕊ℍ','💰𝟜𝟝𝕄𝕀𝕃 ℂ𝔸𝕊ℍ','💸𝟜𝟘𝕄 ℂ𝔸𝕊ℍ','💵𝟛𝟝𝕄𝕀𝕃 ℂ𝔸𝕊ℍ','💶𝟛𝟘𝕄 ℂ𝔸𝕊ℍ','💷𝟚𝟝𝕄𝕀𝕃 ℂ𝔸𝕊ℍ','💴𝟚𝟘𝕄 ℂ𝔸𝕊ℍ','🎫𝟙𝟝𝕄𝕀𝕃 ℂ𝔸𝕊ℍ','💲𝟙𝟘𝕄 ℂ𝔸𝕊ℍ','😎𝟝𝕄 ℂ𝔸𝕊ℍ','🎁𝟜.𝟝𝕄 ℂ𝔸𝕊ℍ','🎉𝟜𝕄 ℂ𝔸𝕊ℍ','✨️𝟛.𝟝𝕄 ℂ𝔸𝕊ℍ','🏧𝟛𝕄 ℂ𝔸𝕊ℍ','💲𝟚.𝟝𝕄 ℂ𝔸𝕊ℍ','💱𝟚𝕄 ℂ𝔸𝕊ℍ','✔️𝟙.𝟝𝕄 ℂ𝔸𝕊ℍ','🥇𝟙𝕄 ℂ𝔸𝕊ℍ','🎟𝟝𝟘𝟘𝕂 ℂ𝔸𝕊ℍ','✨️𝟚𝟝𝟘𝕂 ℂ𝔸𝕊ℍ','🧨𝟙𝟘𝟘𝕂 ℂ𝔸𝕊ℍ','🚮𝟝𝟘𝕂 ℂ𝔸𝕊ℍ','❌️𝔼𝕏𝕀𝕋'},nil,'♛彡 𝕄𝕆ℕ𝔼𝕐 𝕄𝔼ℕ𝕌 彡♛')
+if choice == nil or choice == 24 then 
+gg.toast('ℝ𝔼𝕋𝕌ℝℕ𝕀ℕ𝔾 𝕋𝕆 𝕄𝔸𝕀ℕ 𝕄𝔼ℕ𝕌')
+return mainMenu()
+end
+
+if choice == 1 then
+resetMoney()
+elseif choice == 2then
+ fiftyMil()
+elseif choice == 3 then
+fourFive()
+elseif choice == 4 then 
+fourtyMil()
+elseif choice == 5 then
+threeFive()
+elseif choice == 6 then
+thirtyMil()
+elseif choice == 7 then
+twoFive()
+elseif choice == 8 then
+twentyMil()
+elseif choice == 9 then
+oneFive()
+elseif choice == 10 then
+tenMil()
+elseif choice == 11 then
+fiveMil()
+elseif choice == 12 then
+fourtyFivem()
+elseif choice == 13 then
+fourMil()
+elseif choice == 14 then
+thirtyFive()
+elseif choice == 15 then
+threeMil()
+elseif choice == 16 then
+twentyFive()
+elseif choice == 17 then
+twoMil()
+elseif choice == 18 then
+oneFiveMil()
+elseif choice == 19 then
+oneMil()
+elseif choice == 20 then
+fiveHundredk()
+elseif choice == 21 then
+twoFiftyk()
+elseif choice == 22 then
+oneHundredk()
+elseif choice == 23 then
+fiftyK()
+   end
+  end
+end
+
+function resetMoney()
+    
+    gg.alert('𝔾𝕆 𝕋𝕆 ℂ𝔸ℝ 𝔹𝕌𝕐 𝕃𝕀𝕊𝕋 𝔸ℕ𝔻 𝔽𝕀ℕ𝔻 ℂ𝔸ℝ 𝕎𝕀𝕋ℍ 𝕌ℕ𝔹𝕆𝕌𝔾ℍ𝕋 𝔹𝕆𝔻𝕐 𝕂𝕀𝕋')
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤......')
+    gg.sleep(15000)
+    gg.setRanges(gg.REGION_ANONYMOUS)
+
+    -- Step 1: Search first body kit price ($5,000)
+    gg.alert('𝔽𝕀ℕ𝔻 𝔹𝕆𝔻𝕐 𝕂𝕀𝕋 𝕎𝕆ℝ𝕋ℍ = $𝟝,𝟘𝟘𝟘')
+    gg.sleep(6000)
+    gg.searchNumber('5000', gg.TYPE_DWORD)
+    gg.getResults(100)
+    gg.sleep(4000)
+
+    -- Step 2: Search second body kit price ($10,000)
+    gg.alert('ℕ𝕆𝕎 𝔸𝔻𝔻 𝔸ℕ𝕆𝕋ℍ𝔼ℝ ℙ𝔸ℝ𝕋 𝕊𝕆 = $𝟙𝟘,𝟘𝟘𝟘')
+    gg.sleep(4000)
+    gg.searchNumber('10000', gg.TYPE_DWORD)
+    local results = gg.getResults(1) -- Get the last searched value
+    gg.sleep(3000)
+
+    -- Prompt for money and car price input
+    local input = gg.prompt(
+        {'Enter Current Money Value', 'Enter Car Price'},
+        {nil, nil},
+        {'number', 'number'}
+    )
+
+    if input and input[1] and input[2] then
+        local moneyValue = tonumber(input[1]) -- Convert money input to number
+        local carPrice = tonumber(input[2]) -- Convert car price input to number
+
+        -- Step 3: Subtract car price and add -15,000 to adjust balance to 0
+        if results and #results > 0 then
+            local editedValue = (moneyValue - carPrice) + (-5000)
+            results[1].value = editedValue  -- Apply the edited value directly
+            gg.setValues(results)
+        end
+
+        gg.sleep(2000)
+        gg.alert('ℕ𝕆𝕎 𝔽𝕀ℕ𝔻 𝔹𝕆𝔻𝕐 𝕂𝕀𝕋 ℙ𝔸ℝ𝕋 𝕎𝕀𝕋ℍ ℕ𝔼𝕎 ℙℝ𝕀ℂ𝔼 𝔸ℕ𝔻 𝔹𝕌𝕐 ℂ𝔸ℝ')
+        gg.sleep(5000)
+        gg.clearResults()
+        gg.toast('𝕄𝕠𝕟𝕖𝕪 𝕊𝕦𝕔𝕔𝕖𝕤𝕤𝕗𝕦𝕝𝕝𝕪 ℝ𝕖𝕤𝕖𝕥')
+        gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕦𝕣𝕣𝕖𝕟𝕔𝕪 𝕄𝕖𝕟𝕦')
+        waitForGG(currencyMenu)
+    else
+        gg.alert('Invalid input. Please enter valid numbers.')
+    end
+end
+
+function fiftyMil()
+gg.alert ( ' 𝔾𝕆 𝕋𝕆 ℙ𝔸ℝ𝕂𝕀ℕ𝔾 𝕃𝔼𝕍𝔼𝕃 #𝟚' )
+gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+gg.sleep ( 15000 )
+gg. setRanges (gg. REGION_ANONYMOUS)
+gg. searchNumber ( '60 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.sleep(4000)
+gg. editAll ( ' 1666666 ' ,gg. TYPE_FLOAT )
+gg.sleep(4000)
+gg.alert ( 'ℂ𝕝𝕚𝕔𝕜 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝕃𝕖𝕧𝕖𝕝 #𝟚, 𝕋𝕙𝕖𝕟 𝔹𝕒𝕔𝕜 𝕥𝕠 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 𝔾𝕠 𝕋𝕠 𝕃𝕖𝕧𝕖𝕝 #𝟛 𝕒𝕟𝕕 ℂ𝕠𝕞𝕡𝕝𝕖𝕥𝕖 ' )
+gg.sleep(10000)
+gg. clearResults ()
+gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕦𝕣𝕣𝕖𝕟𝕔𝕪 𝕄𝕖𝕟𝕦')
+    waitForGG(currencyMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function fourFive()
+gg.alert ( '𝔾𝕆 𝕋𝕆 ℙ𝔸ℝ𝕂𝕀ℕ𝔾 𝕃𝔼𝕍𝔼𝕃 #𝟚 ' )
+gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+gg.sleep ( 15000 )
+gg. setRanges (gg. REGION_ANONYMOUS)
+gg. searchNumber ( '60 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.sleep(4000)
+gg. editAll ( ' 1500000 ' ,gg. TYPE_FLOAT )
+gg.sleep(4000)
+gg.alert ( ' ℂ𝕝𝕚𝕔𝕜 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝕃𝕖𝕧𝕖𝕝 #𝟚, 𝕋𝕙𝕖𝕟 𝔹𝕒𝕔𝕜 𝕥𝕠 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 𝔾𝕠 𝕋𝕠 𝕃𝕖𝕧𝕖𝕝 #𝟛 𝕒𝕟𝕕 ℂ𝕠𝕞𝕡𝕝𝕖𝕥𝕖 ' )
+gg.sleep(10000)
+gg. clearResults ()
+gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕦𝕣𝕣𝕖𝕟𝕔𝕪 𝕄𝕖𝕟𝕦')
+    waitForGG(currencyMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function fourtyMil()
+gg.alert ( '𝔾𝕆 𝕋𝕆 ℙ𝔸ℝ𝕂𝕀ℕ𝔾 𝕃𝔼𝕍𝔼𝕃 #𝟚' )
+gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+gg.sleep ( 15000 )
+gg. setRanges (gg. REGION_ANONYMOUS)
+gg. searchNumber ( '60 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.sleep(4000)
+gg. editAll ( ' 1333333 ' ,gg. TYPE_FLOAT )
+gg.sleep(4000)
+gg.alert ( 'ℂ𝕝𝕚??𝕜 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝕃𝕖𝕧𝕖𝕝 #𝟚, 𝕋𝕙𝕖𝕟 𝔹??𝕔𝕜 𝕥𝕠 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 𝔾𝕠 𝕋𝕠 𝕃𝕖𝕧𝕖𝕝 #𝟛 𝕒𝕟𝕕 ℂ𝕠𝕞𝕡𝕝𝕖𝕥𝕖 ' )
+gg.sleep(10000)
+gg. clearResults ()
+gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕦𝕣𝕣𝕖𝕟𝕔𝕪 𝕄𝕖𝕟𝕦')
+    waitForGG(currencyMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function threeFive()
+gg.alert ( ' 𝔾𝕆 𝕋𝕆 ℙ𝔸ℝ𝕂𝕀ℕ𝔾 𝕃𝔼𝕍𝔼𝕃 #𝟚' )
+gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+gg.sleep ( 15000 )
+gg. setRanges (gg. REGION_ANONYMOUS)
+gg. searchNumber ( '60 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.sleep(4000)
+gg. editAll ( ' 1166667 ' ,gg. TYPE_FLOAT )
+gg.sleep(4000)
+gg.alert ( ' ℂ𝕝𝕚𝕔𝕜 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝕃𝕖𝕧𝕖𝕝 #𝟚, 𝕋𝕙𝕖𝕟 𝔹𝕒𝕔𝕜 𝕥𝕠 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 𝔾𝕠 𝕋𝕠 𝕃𝕖𝕧𝕖𝕝 #𝟛 𝕒𝕟𝕕 ℂ𝕠𝕞𝕡𝕝𝕖𝕥𝕖' )
+gg.sleep(10000)
+gg. clearResults ()
+gg.toast(' 𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕦𝕣𝕣𝕖𝕟𝕔𝕪 𝕄𝕖𝕟𝕦')
+    waitForGG(currencyMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function thirtyMil()
+gg.alert ( '𝔾𝕆 𝕋𝕆 ℙ𝔸ℝ𝕂𝕀ℕ𝔾 𝕃𝔼𝕍𝔼𝕃 #𝟚' )
+gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+gg.sleep ( 15000 )
+gg. setRanges (gg. REGION_ANONYMOUS)
+gg. searchNumber ( '60 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.sleep(4000)
+gg. editAll ( ' 1000000 ' ,gg. TYPE_FLOAT )
+gg.sleep(4000)
+gg.alert ( ' ℂ𝕝𝕚𝕔𝕜 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝕃𝕖𝕧𝕖𝕝 #𝟚, 𝕋𝕙𝕖𝕟 𝔹𝕒𝕔𝕜 𝕥𝕠 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 𝔾𝕠 𝕋𝕠 𝕃𝕖𝕧𝕖𝕝 #𝟛 𝕒𝕟𝕕 ℂ𝕠𝕞𝕡𝕝𝕖𝕥𝕖' )
+gg.sleep(10000)
+gg. clearResults ()
+gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕦𝕣𝕣𝕖𝕟𝕔𝕪 𝕄𝕖𝕟𝕦')
+    waitForGG(currencyMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function twoFive()
+gg.alert ( ' 𝔾𝕆 𝕋𝕆 ℙ𝔸ℝ𝕂𝕀ℕ𝔾 𝕃𝔼𝕍𝔼𝕃 #𝟚 ' )
+gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+gg.sleep ( 15000 )
+gg. setRanges (gg. REGION_ANONYMOUS)
+gg. searchNumber ( '60 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.sleep(4000)
+gg. editAll ( ' 833333 ' ,gg. TYPE_FLOAT )
+gg.sleep(4000)
+gg.alert ( 'ℂ𝕝𝕚𝕔𝕜 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝕃𝕖𝕧𝕖𝕝 #𝟚, 𝕋𝕙𝕖𝕟 𝔹𝕒𝕔𝕜 𝕥𝕠 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 𝔾𝕠 𝕋𝕠 𝕃𝕖𝕧𝕖𝕝 #𝟛 𝕒𝕟𝕕 ℂ𝕠𝕞𝕡𝕝𝕖𝕥𝕖 ' )
+gg.sleep(10000)
+gg. clearResults ()
+gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕦𝕣𝕣𝕖𝕟𝕔𝕪 𝕄𝕖𝕟𝕦')
+    waitForGG(currencyMenu
+) -- Ensures script returns to menu instead of restarting
+end
+
+function twentyMil()
+gg.alert ( '𝔾𝕆 𝕋𝕆 ℙ𝔸ℝ𝕂𝕀ℕ𝔾 𝕃𝔼𝕍𝔼𝕃 #𝟚 ' )
+gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+gg.sleep ( 15000 )
+gg. setRanges (gg. REGION_ANONYMOUS)
+gg. searchNumber ( '60 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.sleep(4000)
+gg. editAll ( ' 666667 ' ,gg. TYPE_FLOAT )
+gg.sleep(4000)
+gg.alert ( 'ℂ𝕝𝕚𝕔𝕜 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝕃𝕖𝕧𝕖𝕝 #𝟚, 𝕋𝕙𝕖𝕟 𝔹𝕒𝕔𝕜 𝕥𝕠 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 𝔾𝕠 𝕋𝕠 𝕃𝕖𝕧𝕖𝕝 #𝟛 𝕒𝕟𝕕 ℂ𝕠𝕞𝕡𝕝𝕖𝕥𝕖 ' )
+gg.sleep(10000)
+gg. clearResults ()
+gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕦𝕣𝕣𝕖𝕟𝕔𝕪 𝕄𝕖𝕟𝕦')
+    waitForGG(currencyMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function oneFive()
+gg.alert ( '𝔾𝕆 𝕋𝕆 ℙ𝔸ℝ𝕂𝕀ℕ𝔾 𝕃𝔼𝕍𝔼𝕃 #𝟚' )
+gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+gg.sleep ( 15000 )
+gg. setRanges (gg. REGION_ANONYMOUS)
+gg. searchNumber ( '60 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.sleep(4000)
+gg. editAll ( ' 500000' ,gg. TYPE_FLOAT )
+gg.sleep(4000)
+gg.alert ( ' ℂ𝕝𝕚𝕔𝕜 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝕃𝕖𝕧𝕖𝕝 #𝟚, 𝕋𝕙𝕖𝕟 𝔹𝕒𝕔𝕜 𝕥𝕠 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 𝔾𝕠 𝕋𝕠 𝕃𝕖𝕧𝕖𝕝 #𝟛 𝕒𝕟𝕕 ℂ𝕠𝕞𝕡𝕝𝕖𝕥𝕖 ' )
+gg.sleep(10000)
+gg. clearResults ()
+gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕦𝕣𝕣𝕖𝕟𝕔𝕪 𝕄𝕖𝕟𝕦')
+    waitForGG(currencyMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function tenMil()
+gg.alert ( '𝔾𝕆 𝕋𝕆 ℙ𝔸ℝ𝕂𝕀ℕ𝔾 𝕃𝔼𝕍𝔼𝕃 #𝟚 ' )
+gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+gg.sleep ( 15000 )
+gg. setRanges (gg. REGION_ANONYMOUS)
+gg. searchNumber ( '60 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.sleep(4000)
+gg. editAll ( ' 333333 ' ,gg. TYPE_FLOAT )
+gg.sleep(4000)
+gg.alert ( 'ℂ𝕝𝕚𝕔𝕜 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝕃𝕖𝕧𝕖𝕝 #𝟚, 𝕋𝕙𝕖𝕟 𝔹𝕒𝕔𝕜 𝕥𝕠 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 𝔾𝕠 𝕋𝕠 𝕃𝕖𝕧𝕖𝕝 #𝟛 𝕒𝕟𝕕 ℂ𝕠𝕞𝕡𝕝𝕖𝕥𝕖 ' )
+gg.sleep(10000)
+gg. clearResults ()
+gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕦𝕣𝕣𝕖𝕟𝕔𝕪 𝕄𝕖𝕟𝕦')
+    waitForGG(currencyMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function fiveMil()
+gg.alert ( '𝔾𝕆 𝕋𝕆 ℙ𝔸ℝ𝕂𝕀ℕ𝔾 𝕃𝔼𝕍𝔼𝕃 #𝟚' )
+gg.toast('??𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+gg.sleep ( 15000 )
+gg. setRanges (gg. REGION_ANONYMOUS)
+gg. searchNumber ( '60 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.sleep(4000)
+gg. editAll ( ' 166667 ' ,gg. TYPE_FLOAT )
+gg.sleep(4000)
+gg.alert ( 'ℂ𝕝𝕚𝕔𝕜 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝕃𝕖𝕧𝕖𝕝 #𝟚, 𝕋𝕙𝕖𝕟 𝔹𝕒𝕔𝕜 𝕥𝕠 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 𝔾𝕠 𝕋𝕠 𝕃𝕖𝕧𝕖𝕝 #𝟛 𝕒𝕟𝕕 ℂ𝕠𝕞𝕡𝕝𝕖𝕥𝕖' )
+gg.sleep(10000)
+gg. clearResults ()
+gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕦𝕣𝕣𝕖𝕟𝕔𝕪 𝕄𝕖𝕟𝕦')
+    waitForGG(currencyMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function fourFivem()
+gg.alert ( ' 𝔾𝕆 𝕋𝕆 ℙ𝔸ℝ𝕂𝕀ℕ𝔾 𝕃𝔼𝕍𝔼𝕃 #𝟚' )
+gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+gg.sleep ( 15000 )
+gg. setRanges (gg. REGION_ANONYMOUS)
+gg. searchNumber ( '60 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.sleep(4000)
+gg. editAll ( ' 150000' ,gg. TYPE_FLOAT )
+gg.sleep(4000)
+gg.alert ( 'ℂ𝕝𝕚𝕔𝕜 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝕃𝕖𝕧𝕖𝕝 #𝟚, 𝕋𝕙𝕖𝕟 𝔹𝕒𝕔𝕜 𝕥𝕠 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 𝔾𝕠 𝕋𝕠 𝕃𝕖𝕧𝕖𝕝 #𝟛 𝕒𝕟𝕕 ℂ𝕠𝕞𝕡𝕝𝕖𝕥𝕖 ' )
+gg.sleep(10000)
+gg. clearResults ()
+gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕦𝕣𝕣𝕖𝕟𝕔𝕪 𝕄𝕖𝕟𝕦')
+    waitForGG(currencyMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function fourMil()
+gg.alert ( ' 𝔾𝕆 𝕋𝕆 ℙ𝔸ℝ𝕂𝕀ℕ𝔾 𝕃𝔼𝕍𝔼𝕃 #𝟚' )
+gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+gg.sleep ( 15000 )
+gg. setRanges (gg. REGION_ANONYMOUS)
+gg. searchNumber ( '60 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.sleep(4000)
+gg. editAll ( ' 133333 ' ,gg. TYPE_FLOAT )
+gg.sleep(4000)
+gg.alert ( 'ℂ𝕝𝕚𝕔𝕜 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝕃𝕖𝕧𝕖𝕝 #𝟚, 𝕋𝕙𝕖𝕟 𝔹𝕒𝕔𝕜 𝕥𝕠 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 𝔾𝕠 𝕋𝕠 𝕃𝕖𝕧𝕖𝕝 #𝟛 𝕒𝕟𝕕 ℂ𝕠𝕞𝕡𝕝𝕖𝕥𝕖 ' )
+gg.sleep(10000)
+gg. clearResults ()
+gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕦𝕣𝕣𝕖𝕟𝕔𝕪 𝕄𝕖𝕟𝕦')
+    waitForGG(currencyMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function thirtyFive()
+gg.alert ( ' 𝔾𝕆 𝕋𝕆 ℙ𝔸ℝ𝕂𝕀ℕ𝔾 𝕃𝔼𝕍𝔼𝕃 #𝟚' )
+gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+gg.sleep ( 15000 )
+gg. setRanges (gg. REGION_ANONYMOUS)
+gg. searchNumber ( '60 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.sleep(4000)
+gg. editAll ( ' 116667 ' ,gg. TYPE_FLOAT )
+gg.sleep(4000)
+gg.alert ( 'ℂ𝕝𝕚𝕔𝕜 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝕃𝕖𝕧𝕖𝕝 #𝟚, 𝕋𝕙𝕖𝕟 𝔹𝕒𝕔𝕜 𝕥𝕠 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 𝔾𝕠 𝕋𝕠 𝕃𝕖𝕧𝕖𝕝 #𝟛 𝕒𝕟𝕕 ℂ𝕠𝕞𝕡𝕝𝕖𝕥𝕖 ' )
+gg.sleep(10000)
+gg. clearResults ()
+gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕦𝕣𝕣𝕖𝕟𝕔𝕪 𝕄𝕖𝕟𝕦')
+    waitForGG(currencyMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function threeMil()
+gg.alert ( ' 𝔾𝕆 𝕋𝕆 ℙ𝔸ℝ𝕂𝕀ℕ𝔾 𝕃𝔼𝕍𝔼𝕃 #𝟚' )
+gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+gg.sleep ( 15000 )
+gg. setRanges (gg. REGION_ANONYMOUS)
+gg. searchNumber ( '60 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.sleep(4000)
+gg. editAll ( ' 100000 ' ,gg. TYPE_FLOAT )
+gg.sleep(4000)
+gg.alert ( 'ℂ𝕝𝕚𝕔𝕜 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝕃𝕖𝕧𝕖𝕝 #𝟚, 𝕋𝕙𝕖𝕟 𝔹𝕒𝕔𝕜 𝕥𝕠 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 𝔾𝕠 𝕋𝕠 𝕃𝕖𝕧𝕖𝕝 #𝟛 𝕒𝕟𝕕 ℂ𝕠𝕞𝕡𝕝𝕖𝕥𝕖 ' )
+gg.sleep(10000)
+gg. clearResults ()
+gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕦𝕣𝕣𝕖𝕟??𝕪 𝕄𝕖𝕟𝕦')
+    waitForGG(currencyMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function twentyFive()
+gg.alert ( ' 𝔾𝕆 𝕋?? ℙ𝔸ℝ𝕂𝕀ℕ𝔾 𝕃𝔼𝕍𝔼𝕃 #𝟚' )
+gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+gg.sleep ( 15000 )
+gg. setRanges (gg. REGION_ANONYMOUS)
+gg. searchNumber ( '60 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.sleep(4000)
+gg. editAll ( ' 83333 ' ,gg. TYPE_FLOAT )
+gg.sleep(4000)
+gg.alert ( 'ℂ𝕝𝕚𝕔𝕜 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝕃𝕖𝕧𝕖𝕝 #𝟚, 𝕋𝕙𝕖𝕟 𝔹𝕒𝕔𝕜 𝕥𝕠 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 𝔾𝕠 𝕋𝕠 𝕃𝕖𝕧𝕖𝕝 #𝟛 𝕒𝕟𝕕 ℂ𝕠𝕞𝕡𝕝𝕖𝕥𝕖 ' )
+gg.sleep(10000)
+gg. clearResults ()
+gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕦𝕣𝕣𝕖𝕟𝕔𝕪 𝕄𝕖𝕟𝕦')
+    waitForGG(currencyMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function twoMil()
+gg.alert ( ' 𝔾𝕆 𝕋𝕆 ℙ𝔸ℝ𝕂𝕀ℕ𝔾 𝕃𝔼𝕍𝔼𝕃 #𝟚' )
+gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+gg.sleep ( 15000 )
+gg. setRanges (gg. REGION_ANONYMOUS)
+gg. searchNumber ( '60 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.sleep(4000)
+gg. editAll ( ' 66667 ' ,gg. TYPE_FLOAT )
+gg.sleep(4000)
+gg.alert ( 'ℂ𝕝𝕚𝕔𝕜 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝕃𝕖𝕧𝕖𝕝 #𝟚, 𝕋𝕙𝕖𝕟 𝔹𝕒𝕔𝕜 𝕥𝕠 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 𝔾𝕠 𝕋𝕠 𝕃𝕖𝕧𝕖𝕝 #𝟛 𝕒𝕟𝕕 ℂ𝕠𝕞𝕡𝕝𝕖𝕥𝕖 ' )
+gg.sleep(10000)
+gg. clearResults ()
+gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕦𝕣𝕣𝕖𝕟𝕔𝕪 𝕄𝕖𝕟𝕦')
+    waitForGG(currencyMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function oneFiveMil()
+gg.alert ( ' 𝔾𝕆 𝕋𝕆 ℙ𝔸ℝ𝕂𝕀ℕ𝔾 𝕃𝔼𝕍𝔼𝕃 #𝟚' )
+gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+gg.sleep ( 15000 )
+gg. setRanges (gg. REGION_ANONYMOUS)
+gg. searchNumber ( '60 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.sleep(4000)
+gg. editAll ( ' 50000 ' ,gg. TYPE_FLOAT )
+gg.sleep(4000)
+gg.alert ( 'ℂ𝕝𝕚𝕔𝕜 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝕃𝕖𝕧𝕖𝕝 #𝟚, 𝕋𝕙𝕖𝕟 𝔹𝕒𝕔𝕜 𝕥𝕠 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 𝔾𝕠 𝕋𝕠 𝕃𝕖𝕧𝕖𝕝 #𝟛 𝕒𝕟𝕕 ℂ𝕠𝕞𝕡𝕝𝕖𝕥𝕖 ' )
+gg.sleep(10000)
+gg. clearResults ()
+gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕦𝕣𝕣𝕖𝕟𝕔𝕪 𝕄𝕖𝕟𝕦')
+    waitForGG(currencyMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function oneMil()
+gg.alert ( ' 𝔾𝕆 𝕋𝕆 ℙ𝔸ℝ𝕂𝕀ℕ𝔾 𝕃𝔼𝕍𝔼𝕃 #𝟚' )
+gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+gg.sleep ( 15000 )
+gg. setRanges (gg. REGION_ANONYMOUS)
+gg. searchNumber ( '60 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.sleep(4000)
+gg. editAll ( ' 33333 ' ,gg. TYPE_FLOAT )
+gg.sleep(4000)
+gg.alert ( 'ℂ𝕝𝕚𝕔𝕜 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝕃𝕖𝕧𝕖𝕝 #𝟚, 𝕋𝕙𝕖𝕟 𝔹𝕒𝕔𝕜 𝕥𝕠 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 𝔾𝕠 𝕋𝕠 𝕃𝕖𝕧𝕖𝕝 #𝟛 𝕒𝕟𝕕 ℂ𝕠𝕞𝕡𝕝𝕖𝕥𝕖 ' )
+gg.sleep(10000)
+gg. clearResults ()
+gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕦𝕣𝕣𝕖𝕟𝕔𝕪 𝕄𝕖𝕟𝕦')
+    waitForGG(currencyMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function fiveHundredk()
+gg.alert ( ' 𝔾𝕆 𝕋𝕆 ℙ𝔸ℝ𝕂𝕀ℕ𝔾 𝕃𝔼𝕍𝔼𝕃 #𝟚' )
+gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+gg.sleep ( 15000 )
+gg. setRanges (gg. REGION_ANONYMOUS)
+gg. searchNumber ( '60 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.sleep(4000)
+gg. editAll ( ' 16667 ' ,gg. TYPE_FLOAT )
+gg.sleep(4000)
+gg.alert ( 'ℂ𝕝𝕚𝕔𝕜 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝕃𝕖𝕧𝕖𝕝 #𝟚, 𝕋𝕙𝕖𝕟 𝔹𝕒𝕔𝕜 𝕥𝕠 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 𝔾𝕠 𝕋𝕠 𝕃𝕖𝕧𝕖𝕝 #𝟛 𝕒𝕟𝕕 ℂ𝕠𝕞𝕡𝕝𝕖𝕥𝕖 ' )
+gg.sleep(10000)
+gg. clearResults ()
+gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕦𝕣𝕣𝕖𝕟𝕔𝕪 𝕄𝕖𝕟𝕦')
+    waitForGG(currencyMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function twoFiftyk()
+gg.alert ( ' 𝔾𝕆 𝕋𝕆 ℙ𝔸ℝ𝕂𝕀ℕ𝔾 𝕃𝔼𝕍𝔼𝕃 #𝟚' )
+gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+gg.sleep ( 15000 )
+gg. setRanges (gg. REGION_ANONYMOUS)
+gg. searchNumber ( '60 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 300)
+gg.sleep(4000)
+gg. editAll ( ' 8333 ' ,gg. TYPE_FLOAT )
+gg.sleep(4000)
+gg.alert ( 'ℂ𝕝𝕚𝕔𝕜 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝕃𝕖𝕧𝕖𝕝 #𝟚, 𝕋𝕙𝕖𝕟 𝔹𝕒𝕔𝕜 𝕥𝕠 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 𝔾𝕠 𝕋𝕠 𝕃𝕖𝕧𝕖𝕝 #𝟛 𝕒𝕟𝕕 ℂ𝕠𝕞𝕡𝕝𝕖𝕥𝕖 ' )
+gg.sleep(10000)
+gg. clearResults ()
+gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕦𝕣𝕣𝕖𝕟𝕔𝕪 𝕄𝕖𝕟𝕦')
+    waitForGG(currencyMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function oneHundredk()
+gg.alert ( ' 𝔾𝕆 𝕋𝕆 ℙ𝔸ℝ𝕂𝕀ℕ𝔾 𝕃𝔼𝕍𝔼𝕃 #𝟚' )
+gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+gg.sleep ( 15000 )
+gg. setRanges (gg. REGION_ANONYMOUS)
+gg. searchNumber ( '60 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.sleep(4000)
+gg. editAll ( ' 3333 ' ,gg. TYPE_FLOAT )
+gg.sleep(4000)
+gg.alert ( 'ℂ𝕝𝕚𝕔𝕜 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝕃𝕖𝕧𝕖𝕝 #𝟚, 𝕋𝕙𝕖𝕟 𝔹𝕒𝕔𝕜 𝕥𝕠 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 𝔾𝕠 𝕋𝕠 𝕃𝕖𝕧𝕖𝕝 #𝟛 𝕒𝕟𝕕 ℂ𝕠𝕞𝕡𝕝𝕖𝕥𝕖 ' )
+gg.sleep(10000)
+gg. clearResults ()
+gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕦𝕣𝕣𝕖𝕟𝕔𝕪 𝕄𝕖𝕟𝕦')
+    waitForGG(currencyMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function fiftyK()
+gg.alert ( ' 𝔾𝕆 𝕋𝕆 ℙ𝔸ℝ𝕂𝕀ℕ𝔾 𝕃𝔼𝕍𝔼𝕃 #𝟚' )
+gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+gg.sleep ( 15000 )
+gg. setRanges (gg. REGION_ANONYMOUS)
+gg. searchNumber ( '60 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.sleep(4000)
+gg. editAll ( ' 1667 ' ,gg. TYPE_FLOAT )
+gg.sleep(4000)
+gg.alert ( 'ℂ𝕝𝕚𝕔𝕜 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝕃𝕖𝕧𝕖𝕝 #𝟚, 𝕋𝕙𝕖𝕟 𝔹𝕒𝕔𝕜 𝕥𝕠 𝕆𝕥𝕙𝕖𝕣 𝕃𝕖𝕧𝕖𝕝𝕤, 𝕋𝕙𝕖𝕟 𝔾𝕠 𝕋𝕠 𝕃𝕖𝕧𝕖𝕝 #𝟛 𝕒𝕟𝕕 ℂ𝕠𝕞𝕡𝕝𝕖𝕥𝕖 ' )
+gg.sleep(10000)
+gg. clearResults ()
+gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕦𝕣𝕣𝕖𝕟𝕔𝕪 𝕄𝕖𝕟𝕦')
+    waitForGG(currencyMenu) -- Ensures script returns to menu instead of restarting
+end
+
+
+function coinMenu()
+    gg.alert('🏆𝕎𝔼𝕃ℂ𝕆𝕄𝔼 𝕋𝕆 ℂ𝕆𝕀ℕ 𝕄𝔼ℕ𝕌🏆\n ℝ𝕖𝕤𝕖𝕥 𝔾𝕒𝕞𝕖 +𝔾𝔾 𝔸𝕗𝕥𝕖𝕣 𝔼𝕒𝕔𝕙 ℂ𝕠𝕚𝕟 𝕄𝕠𝕕')
+ while true do 
+ local choice=gg.choice({'❌️ℝ𝕖𝕤𝕖𝕥 ℂ𝕠𝕚𝕟𝕤','🪦ℂ𝕠𝕚𝕟 ℝ𝕖𝕧𝕚𝕧𝕖','♻️ℂ𝕠𝕚𝕟 ℝ𝕖𝕔𝕠𝕧𝕖𝕣𝕪','🪙𝟝𝟘𝟘𝕂 ℂ𝕠𝕚𝕟𝕤','🎫𝟜𝟝𝟘𝕂 ℂ𝕠𝕚𝕟𝕤','🚀𝟜𝟘𝟘𝕂 ℂ𝕠𝕚𝕟𝕤','🎁𝟛𝟝𝟘𝕂 ℂ𝕠𝕚𝕟𝕤','✨️𝟛𝟘𝟘𝕂 ℂ𝕠𝕚𝕟𝕤','👑𝟚𝟝𝟘𝕂 ℂ𝕠𝕚𝕟𝕤','🧨𝟚𝟘𝟘𝕂 ℂ𝕠𝕚𝕟𝕤','🎟𝟙𝟝𝟘𝕂 ℂ𝕠𝕚𝕟𝕤','🥇𝟙𝟘𝟘𝕂 ℂ𝕠𝕚𝕟𝕤','💳𝟡𝟘𝕂 ℂ𝕠𝕚𝕟𝕤','💶𝟠𝟘𝕂 ℂ𝕠𝕚𝕟𝕤','💴𝟟𝟘𝕂 ℂ𝕠𝕚𝕟𝕤','💷𝟞𝟘𝕂 ℂ𝕠𝕚𝕟𝕤','🎉𝟝𝟘𝕂 ℂ𝕠𝕚𝕟𝕤','💱𝟜𝟝𝕂 ℂ𝕠𝕚𝕟𝕤','🏧𝟜𝟘𝕂 ℂ𝕠𝕚𝕟𝕤','💰𝟛𝟝𝕂 ℂ𝕠𝕚𝕟𝕤','🏆𝟛𝟘𝕂 ℂ𝕠𝕚𝕟𝕤','💸𝟚𝟝𝕂 ℂ𝕠𝕚𝕟𝕤','💲𝟚𝟘𝕂 ℂ𝕠𝕚𝕟𝕤','✔️𝟙𝟝𝕂 ℂ𝕠𝕚𝕟𝕤','🎆𝟙𝟘𝕂 ℂ𝕠𝕚𝕟𝕤','🎖𝟝𝕂 ℂ𝕠𝕚𝕟𝕤','😎𝟜𝕂 ℂ𝕠𝕚𝕟𝕤','🤑𝟛𝕂 ℂ𝕠𝕚𝕟𝕤','✅️𝟚𝕂 ℂ𝕠𝕚𝕟𝕤','🚮𝟙𝕂 ℂ𝕠𝕚𝕟𝕤','🛠ℂ𝕠𝕚𝕟 𝕀𝕟𝕗𝕠/ℍ𝕖𝕝𝕡','❌️𝔼𝕩𝕚𝕥'},nil,'♛彡 ℂ𝕆𝕀ℕ 𝕄𝔼ℕ𝕌 彡♛')
+if choice == nil or choice == 32 then 
+gg.toast('ℝ𝕖𝕥𝕦𝕣𝕟𝕚𝕟𝕘 𝕋𝕠 𝕄𝔸𝕀ℕ 𝕄𝕖𝕟𝕦')
+return mainMenu()
+end
+
+if choice == 1 then
+ resetCoins()
+elseif choice == 2 then
+coinRevive()
+ elseif choice == 3 then
+ coinRecovery()
+elseif choice == 4 then
+fiveHundred()
+elseif choice == 5 then
+fourFifty()
+elseif choice == 6 then 
+fourHundred()
+elseif choice == 7 then
+threeFifty()
+elseif choice == 8 then
+threeHundred()
+elseif choice == 9 then
+twoFifty()
+elseif choice == 10 then
+twoHundred()
+elseif choice == 11 then
+oneFifty()
+elseif choice == 12 then
+oneHundred()
+elseif choice == 13 then
+ninetyCoins()
+elseif choice == 14 then
+eightyCoins()
+elseif choice == 15 then
+seventyCoins()
+elseif choice == 16 then
+sixtyCoins()
+elseif choice == 17 then
+fiftyCoins()
+elseif choice == 18 then
+fourtyFive()
+elseif choice == 19 then
+fourtyCoins()
+elseif choice == 20 then
+thirtyFive()
+elseif choice == 21 then
+thirtyCoins()
+elseif choice == 22 then
+twentyFive()
+elseif choice == 23 then
+twentyCoins()
+elseif choice == 24 then
+fifteenCoins()
+elseif choice == 25 then
+tenCoins()
+elseif choice == 26 then
+fiveCoins()
+elseif choice == 27 then
+fourCoins()
+elseif choice == 28 then
+threeCoins()
+elseif choice == 29 then
+twoCoins()
+elseif choice == 30 then
+oneCoins()
+elseif choice == 31 then
+coinsInfo()
+   end
+  end
+end
+
+function resetCoins()
+    local input = gg.prompt({'Enter Current Coin Value'}, {0}, {'number'})
+    
+    if input and input[1] then
+        local coinValue = tonumber(input[1]) -- Convert input to number
+        
+        -- Calculate the edit value using the ratio 100k = -294,867,296
+        local editValue = (coinValue * (294867296 / 100000)) + 2949 --1 coin
+
+        gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+        gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+        gg.sleep(15000)
+
+        -- Search for the entered coin value
+        gg. setRanges (gg. REGION_ANONYMOUS)
+        gg.sleep(1000)
+        gg.searchNumber('500;100',gg.TYPE_DWORD)
+        local results = gg.getResults(50)
+
+        if #results > 0 then
+            -- Apply the calculated edit value to reset coins to 0
+            gg.editAll(tostring(coinValue), gg.TYPE_DWORD)
+
+            gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖")
+            gg.sleep(9000)
+            gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+            gg.clearResults()
+        else
+            gg.alert("❌ ℕ𝕠 𝕧𝕒𝕝𝕦𝕖𝕤 𝕗𝕠𝕦𝕟𝕕! 𝕄𝕒𝕜𝕖 𝕤𝕦𝕣𝕖 𝕪𝕠𝕦'𝕣𝕖 𝕚𝕟 𝕥𝕙𝕖 𝕔𝕠𝕣𝕣𝕖𝕔𝕥 𝕞𝕖𝕟𝕦 𝕓𝕖𝕗𝕠𝕣𝕖 𝕒𝕡𝕡𝕝𝕪𝕚𝕟𝕘.")
+        end
+    else
+        gg.alert("Invalid coin input. Try again.")
+    end
+
+    gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕠𝕚𝕟 𝕄𝕖𝕟𝕦')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function coinRevive()
+    -- Prompt user for current coin value
+    local input = gg.prompt({'Enter Current Coin Value'}, {0}, {'number'})
+
+    if input and input[1] then
+        local coinValue = tonumber(input[1]) -- Convert input to number
+
+        gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+        gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+        gg.setRanges(gg.REGION_ANONYMOUS)
+        gg.sleep(15000)
+
+        -- Search for negative coin value range (e.g., large number or range around the negative value)
+        gg.searchNumber("500;100", gg.TYPE_DWORD)
+        gg.sleep(2000)
+        local results = gg.getResults(100)
+
+        if #results > 0 then
+            -- Go to first result
+            gg.gotoAddress(results[1].address)
+
+            -- Modify value to a large positive number (wrap around the negative value)
+            local largePositiveValue = 2147483647 -- Max 32-bit unsigned value (2,147,483,647)
+            local floatResults = gg.getResults(1) -- Get float value at address
+            floatResults[1].value = largePositiveValue
+            floatResults[1].flags = gg.TYPE_DWORD
+            gg.setValues(floatResults)
+            gg.sleep(1000)
+
+            -- Apply final edit and reset coin value
+            gg.editAll(tostring(largePositiveValue), gg.TYPE_DWORD)
+
+            gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖")
+            gg.sleep(9000)
+            gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+
+            gg.clearResults()
+        else
+            gg.alert("❌ ℕ𝕠 𝕧𝕒𝕝𝕦𝕖𝕤 𝕗𝕠𝕦𝕟𝕕! 𝕄𝕒𝕜𝕖 𝕤𝕦𝕣𝕖 𝕪𝕠𝕦'𝕣𝕖 𝕚𝕟 𝕥𝕙𝕖 𝕔𝕠𝕣𝕣𝕖𝕔𝕥 𝕞𝕖𝕟𝕦 𝕓𝕖𝕗𝕠𝕣𝕖 𝕒𝕡𝕡𝕝𝕪𝕚𝕟𝕘.")
+        end
+    else
+        gg.alert("❌ 𝕀𝕟𝕧𝕒𝕝𝕚𝕕 𝕀𝕟𝕡𝕦𝕥! 𝔼𝕟𝕥𝕖𝕣 𝕪𝕠𝕦𝕣 𝕔𝕠𝕚𝕟 𝕧𝕒𝕝𝕦𝕖.")
+    end
+
+    gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕠𝕚𝕟 𝕄𝕖𝕟𝕦')
+    waitForGG(coinMenu)
+end
+
+function coinRecovery()
+gg.alert('🚀ℂ𝕠𝕞𝕚𝕟𝕘 𝕊𝕠𝕠𝕟....')
+    end
+
+function fiveHundred()
+    
+    gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(2000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$ ")
+        gg.sleep(9000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294467296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 𝔾𝕠 𝕋𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝔸𝕟𝕕 𝔹𝕦𝕪 𝟙 ℂ𝕙𝕒𝕟𝕘𝕖𝕕 ℙ𝕣𝕚𝕔𝕖 ✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ ℕ𝕠 𝕧𝕒𝕝𝕦𝕖𝕤 𝕗𝕠𝕦𝕟𝕕! 𝕄𝕒𝕜𝕖 𝕤𝕦𝕣𝕖 𝕪𝕠𝕦'𝕣𝕖 𝕚𝕟 𝕥𝕙𝕖 𝕔𝕠𝕣𝕣𝕖𝕔𝕥 𝕞𝕖𝕟𝕦 𝕓𝕖𝕗𝕠𝕣𝕖 𝕒𝕡𝕡𝕝𝕪𝕚𝕟𝕘.")
+    end
+        gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕠𝕚𝕟 𝕄𝕖𝕟𝕦')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function fourFifty()
+    gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(2000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$ ")
+        gg.sleep(9000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294507296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖 ✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ No values found! Make sure you're in the correct menu before applying.")
+    end
+        gg.toast('Tap GG To Return To Coin Menu')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function fourHundred()
+    gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(2000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$")
+        gg.sleep(9000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294567296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖 ✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ No values found! Make sure you're in the correct menu before applying.")
+    end
+        gg.toast('Tap GG To Return To Coin Menu')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+    function threeFifty()
+            gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.toast('You Have 15 Seconds......')
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(2000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$")
+        gg.sleep(9000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294607296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 ??𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠??𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖 ✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ No values found! Make sure you're in the correct menu before applying.")
+    end
+        gg.toast('Tap GG To Return To Coin Menu')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function threeHundred()
+        gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤......')
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(2000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$")
+        gg.sleep(9000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294667296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖 ✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ No values found! Make sure you're in the correct menu before applying.")
+    end
+        gg.toast('Tap GG To Return To Coin Menu')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+function twoFifty()
+        gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.toast('You Have 15 Seconds......')
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(2000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$ ")
+        gg.sleep(9000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294707296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖 ✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ No values found! Make sure you're in the correct menu before applying.")
+    end
+        gg.toast('Tap GG To Return To Coin Menu')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function twoHundred()
+        gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(2000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$")
+        gg.sleep(9000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294767296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ No values found! Make sure you're in the correct menu before applying.")
+    end
+        gg.toast('Tap GG To Return To Coin Menu')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function oneFifty()
+        gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.toast('You Have 15 Seconds......')
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(2000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$ ")
+        gg.sleep(9000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294807296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖 ✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ No values found! Make sure you're in the correct menu before applying.")
+    end
+        gg.toast('Tap GG To Return To Coin Menu')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function oneHundred()
+        gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(2000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$")
+        gg.sleep(9000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294867296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ No values found! Make sure you're in the correct menu before applying.")
+    end
+        gg.toast('Tap GG To Return To Coin Menu')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+function ninetyCoins()
+        gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤......')
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(2000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$")
+        gg.sleep(9000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294877296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖 ✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ No values found! Make sure you're in the correct menu before applying.")
+    end
+        gg.toast('Tap GG To Return To Coin Menu')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function eightyCoins()
+        gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(2000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$")
+        gg.sleep(9000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294887296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖 ✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ No values found! Make sure you're in the correct menu before applying.")
+    end
+        gg.toast('Tap GG To Return To Coin Menu')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function seventyCoins()
+        gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(2000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$ ")
+        gg.sleep(9000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294897296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖 ✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ No values found! Make sure you're in the correct menu before applying.")
+    end
+        gg.toast('Tap GG To Return To Coin Menu')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function sixtyCoins()
+        gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(2000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$")
+        gg.sleep (9000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294907296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖 ✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ No values found! Make sure you're in the correct menu before applying.")
+    end
+        gg.toast('Tap GG To Return To Coin Menu')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function fiftyCoins()
+        gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤......')
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(2000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$ ")
+        gg.sleep(9000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294917296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖 ✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ No values found! Make sure you're in the correct menu before applying.")
+    end
+        gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕠𝕚𝕟 𝕄𝕖𝕟𝕦')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function fourtyFive()
+        gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(2000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$")
+        gg.sleep(9000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294922296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖 ✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ No values found! Make sure you're in the correct menu before applying.")
+    end
+        gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕠𝕚𝕟 𝕄𝕖𝕟𝕦')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function fourtyCoins()
+        gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(2000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$ ")
+        gg.sleep(9000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294927296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖 ✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ No values found! Make sure you're in the correct menu before applying.")
+    end
+        gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕠𝕚𝕟 𝕄𝕖𝕟𝕦')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function thirtyFive()
+     gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(2000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$")
+        gg.sleep(9000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294932296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖 ✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ No values found! Make sure you're in the correct menu before applying.")
+    end
+        gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕠𝕚𝕟 𝕄𝕖𝕟𝕦')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function thirtyCoins()
+        gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(9000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$ ")
+        gg.sleep(4000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294937296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ No values found! Make sure you're in the correct menu before applying.")
+    end
+        gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕠𝕚𝕟 𝕄𝕖𝕟𝕦')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function twentyFive()
+        gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(2000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$ ")
+        gg.sleep(9000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294942296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖 ✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ No values found make sure you're in the correct menu before applying.")
+    end
+        gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕠𝕚𝕟 𝕄𝕖𝕟𝕦')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function twentyCoins()
+        gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(2000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$ ")
+        gg.sleep(9000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294947296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖 ✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ No values found! Make sure you're in the correct menu before applying.")
+    end
+        gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕠𝕚𝕟 𝕄𝕖𝕟𝕦')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function fifteenCoins()
+        gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(2000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$")
+        gg.sleep(9000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294952296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖 ✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ No values found! Make sure you're in the correct menu before applying.")
+    end
+        gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕠𝕚𝕟 𝕄𝕖𝕟𝕦')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function tenCoins()
+     gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(2000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$ ")
+        gg.sleep(9000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294957296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖 ✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ No values found! Make sure you're in the correct menu before applying.")
+    end
+        gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕠𝕚𝕟 𝕄𝕖𝕟𝕦')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function fiveCoins()
+      gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤...')
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(2000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$ ")
+        gg.sleep(9000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294962296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖 ✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ No values found! Make sure you're in the correct menu before applying.")
+    end
+        gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕠𝕚𝕟 𝕄𝕖𝕟𝕦')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function fourCoins()
+        gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(2000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$ ")
+        gg.sleep(9000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294963296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ No values found! Make sure you're in the correct menu before applying.")
+    end
+        gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕠𝕚𝕟 𝕄𝕖𝕟𝕦')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function threeCoins()
+        gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(2000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$ ")
+        gg.sleep(9000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294964296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖 ✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ No values found! Make sure you're in the correct menu before applying.")
+    end
+        gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕠𝕚𝕟 𝕄𝕖𝕟𝕦')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function twoCoins()
+        gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(2000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$ ")
+        gg.sleep(9000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294965296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖 ✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ No values found! Make sure you're in the correct menu before applying.")
+    end
+        gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕠𝕚𝕟 𝕄𝕖𝕟𝕦')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function oneCoins()
+        gg.alert("𝔾𝕆 𝕋𝕆 𝔻ℝ𝕀𝕍𝔼ℝ 𝔼𝔻𝕀𝕋 𝕄𝔼ℕ𝕌")
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.sleep(15000) -- Increased sleep time for stability
+
+    gg.searchNumber("500;100", gg.TYPE_DWORD)
+    gg.sleep(2000) -- Added delay before getting results
+    local results = gg.getResults(50) -- Reduced batch size to prevent crashes
+
+    if #results > 0 then
+        gg.editAll("-2000000000", gg.TYPE_DWORD)
+        gg.sleep(2000) -- Added delay to ensure values apply properly
+        gg.alert("ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟚 𝕨𝕚𝕥𝕙 -$ ")
+        gg.sleep(9000)
+        gg.toast("✅ ℂ𝕠𝕚𝕟 ℍ𝕒𝕔𝕜 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!")
+        gg.alert('𝔸𝕗𝕥𝕖𝕣 𝔹𝕦𝕪𝕚𝕟𝕘 𝔹𝕠𝕥𝕙 -$ 𝕎𝕒𝕚𝕥 𝕀𝕟 𝔻𝕣𝕚𝕧𝕖𝕣 𝕄𝕖𝕟𝕦 𝔽𝕠𝕣 𝔽𝕚𝕟𝕒𝕝 𝔼𝕕𝕚𝕥')
+        gg.editAll("-294966296",gg.TYPE_DWORD)
+        gg.sleep(3000)
+        gg.alert('ℕ𝕠𝕨 𝕘𝕠 𝕥𝕠 𝔸𝕟𝕚𝕞𝕒𝕥𝕚𝕠𝕟𝕤 𝕒𝕟𝕕 𝕓𝕦𝕪 𝟙 𝕨𝕚𝕥𝕙 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕧𝕒𝕝𝕦𝕖✅️')
+        gg.sleep(5000)
+        gg.clearResults()
+    else
+        gg.alert("❌ No values found! Make sure you're in the correct menu before applying.")
+    end
+       gg.toast('𝕋𝕒𝕡 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℂ𝕠𝕚𝕟 𝕄𝕖𝕟𝕦')
+    waitForGG(coinMenu) -- Ensures script returns to menu instead of restarting
+end
+
+function coinsInfo()
+    gg.alert('𝕋𝕠 𝕊𝕖𝕥 ℂ𝕠𝕚𝕟𝕤 𝕋𝕠 𝟘 𝕌𝕤𝕖 ℝ𝕖𝕤𝕖𝕥 ℂ𝕠𝕚𝕟𝕤 \n 𝕀𝕗 ℂ𝕠𝕚𝕟 𝕍𝕒𝕝𝕦𝕖 𝕀𝕤 𝕊𝕥𝕦𝕔𝕜 ℕ𝕖𝕘𝕒𝕥𝕚𝕧𝕖 𝕌𝕤𝕖 ℂ𝕠𝕚𝕟 ℝ𝕖𝕧𝕚𝕧𝕖')
+    gg.toast('Returning To Coin Menu')
+    return coinMenu()
+    end
+-- Wait for GG to proceed
+function waitForGG()
+    gg.toast("Tap GG to continue...")
+    while true do
+        if gg.isVisible() then
+            gg.sleep(1000)
+            break
+        end
+        gg.sleep(100)
+    end
+end
+
+function suspensionMenu()
+    while true do
+        local choice = gg.choice({
+            'ℂ𝕒𝕞𝕓𝕖𝕣 📏', 
+            '𝕀𝕟𝕧𝕖𝕣𝕥𝕖𝕕 ℂ𝕒𝕞𝕓𝕖𝕣 🤯', 
+            'ℕ𝕖𝕘𝕒𝕥𝕚𝕧𝕖 ℂ𝕒𝕞𝕓𝕖𝕣⛔️',
+            'ℂ𝕦𝕤𝕥𝕠𝕞 ℂ𝕒𝕞𝕓𝕖𝕣🛠', 
+            '𝕌𝔽𝕆 𝕄𝕖𝕟𝕦🛸', 
+            '𝕊𝕥𝕖𝕖𝕣𝕚𝕟𝕘 𝔸𝕟𝕘𝕝𝕖 𝕄𝕖𝕟𝕦🏎', 
+            'Back'
+        }, nil, '🛠𝕊𝕦𝕤𝕡𝕖𝕟𝕤𝕚𝕠𝕟 𝕄𝕖𝕟𝕦🛠')
+
+        if choice == nil or choice == 7 then
+            gg.toast("ℝ𝕖𝕥𝕦𝕣𝕟𝕚𝕟𝕘 𝕋𝕠 𝕄𝕒𝕚𝕟 𝕄𝕖𝕟𝕦.....")
+            return mainMenu() -- Returns to main menu when back is pressed
+        end
+
+        if choice == 1 then
+            camber()
+        elseif choice == 2 then
+           invertedCamber()
+        elseif choice == 3 then
+            negativeCamber()
+        elseif choice == 4 then
+            customCamber()
+        elseif choice == 5 then
+            ufoMode()
+        elseif choice == 6 then
+            steeringAngleMenu()
+        end
+    end
+end
+
+-- Camber function
+function camber()
+
+gg.alert ( '𝕊𝕖𝕥 𝕀𝕟𝕔𝕝𝕚𝕟𝕖 𝕋𝕠 𝟙𝟘' )
+gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+gg.sleep ( 15000 )
+gg. setRanges (gg. REGION_ANONYMOUS)
+gg. searchNumber ( ' -10 ' , gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.alert ( ' 𝕊𝕖𝕥 𝕀𝕟𝕔𝕝𝕚𝕟𝕖 𝕋𝕠 𝟘 ' )
+gg.sleep ( 5000 )
+gg. searchNumber ( ' 0 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.alert ( ' 𝕊𝕖𝕥 𝕀𝕟𝕔𝕝𝕚𝕟𝕖 𝕋𝕠 𝟙𝟘 ' )
+gg.sleep ( 5000 )
+gg. searchNumber ( ' -10 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg. editAll ( ' -36 ' ,gg. TYPE_FLOAT )
+gg.alert ( ' 𝕊𝕦𝕤𝕡𝕖𝕟𝕤𝕚𝕠𝕟 𝔸𝕕𝕛𝕦𝕤𝕥𝕖𝕕✅️ ' )
+gg.sleep(2000)
+gg. clearResults ()
+gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 𝕊𝕦𝕤𝕡𝕖𝕟𝕤𝕚𝕠𝕟 𝕄𝕖𝕟𝕦')
+waitForGG(suspensionMenu)
+end
+
+-- Inverted Camber Function
+function invertedCamber()
+
+gg.setRanges(gg. REGION_ANONYMOUS)
+gg.searchNumber('-1',gg.TYPE_FLOAT) -- Presearch
+gg.getResults(100)
+gg.sleep(2000)
+gg.editAll('1',gg.TYPE_FLOAT)
+gg.sleep(500)
+gg.clearResults()
+
+gg.alert ( ' 𝕊𝕖𝕥 𝕀𝕟𝕔𝕝𝕚𝕟𝕖 𝕋𝕠 𝟙𝟘 ' )
+gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+gg.sleep ( 15000 )
+gg. setRanges (gg. REGION_ANONYMOUS)
+gg. searchNumber ( ' -10 ' , gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.alert ( ' 𝕊𝕖𝕥 𝕀𝕟𝕔𝕝𝕚𝕟𝕖 𝕋𝕠 𝟘 ' )
+gg.sleep ( 5000 )
+gg. searchNumber ( ' 0 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.alert ( ' 𝕊𝕖𝕥 𝕀𝕟𝕔𝕝𝕚𝕟𝕖 𝕋𝕠 𝟙𝟘 ' )
+gg.sleep ( 5000 )
+gg. searchNumber ( ' -10 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg. editAll ( ' -225 ' ,gg. TYPE_FLOAT )
+gg.alert ( ' 𝕊𝕦𝕤𝕡𝕖𝕟𝕤𝕚𝕠𝕟 𝔸𝕕𝕛𝕦𝕤𝕥𝕖𝕕 ✅️ ' )
+gg.sleep(2000)
+gg. clearResults ()
+gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 𝕊𝕦𝕤𝕡𝕖𝕟𝕤𝕚𝕠𝕟 𝕄𝕖𝕟𝕦')
+waitForGG(suspensionMenu)
+end
+
+-- Negative Camber function
+function negativeCamber()
+gg.alert ( ' 𝕊𝕖𝕥 𝕀𝕟𝕔𝕝𝕚𝕟𝕖 𝕋𝕠 𝟙𝟘 ' )
+gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+gg.sleep ( 15000 )
+gg. setRanges (gg. REGION_ANONYMOUS)
+gg. searchNumber ( ' -10 ' , gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.alert ( '𝕊𝕖𝕥 𝕀𝕟𝕔𝕝𝕚𝕟𝕖 𝕋𝕠 𝟘 ' )
+gg.sleep ( 5000 )
+gg. searchNumber ( ' 0 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg.alert ( ' 𝕊𝕖𝕥 𝕀𝕟𝕔𝕝𝕚𝕟𝕖 𝕋𝕠 𝟙𝟘 ' )
+gg.sleep ( 5000 )
+gg. searchNumber ( ' -10 ' ,gg. TYPE_FLOAT )
+gg. getResults ( 100 )
+gg. editAll ( ' 30 ' ,gg. TYPE_FLOAT )
+gg.alert ( '𝕊𝕦𝕤𝕡𝕖𝕟𝕤𝕚𝕠𝕟 𝔸𝕕𝕛𝕦𝕤𝕥𝕖𝕕✅️ ' )
+gg.sleep(3000)
+gg.clearResults()
+gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 𝕊𝕦𝕤𝕡𝕖𝕟𝕤𝕚𝕠𝕟 𝕄𝕖𝕟𝕦')
+waitForGG(suspensionMenu)
+end
+
+-- Custom Camber function
+function customCamber()
+    -- Pre-search step: Search -10 and edit -10 (before the prompt and main sequence)
+    gg.searchNumber('-10', gg.TYPE_FLOAT)  -- Pre-search for -10
+    local results = gg.getResults(100)  -- Fetch results to prepare for editing
+
+    if #results > 0 then
+        gg.editAll('-10', gg.TYPE_FLOAT)  -- Edit -10 (reset)
+        gg.clearResults()  -- Clear results after pre-search
+    else
+        gg.toast("❌ Pre-search for -10 failed! No results found.")
+        return
+    end
+
+    -- Prompt for custom camber input after pre-search
+    local input = gg.prompt({'Enter Custom Camber Value'}, {0}, {'number'})
+    if input and input[1] then
+        local value = input[1]
+
+        -- Main sequence
+        gg.alert('𝕊𝕖𝕥 𝕀𝕟𝕔𝕝𝕚𝕟𝕖 𝕋𝕠 𝟙𝟘')
+        gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+        gg.sleep(15000)  -- Wait for user to set incline to 10
+        gg.searchNumber('-10', gg.TYPE_FLOAT)  -- Search for -10
+        gg.getResults(100)  -- Fetch results for -10
+
+        gg.alert('𝕊𝕖𝕥 𝕀𝕟𝕔𝕝𝕚𝕟𝕖 𝕋𝕠 𝟘')
+        gg.sleep(5000)  -- Wait for user to set incline to 0
+        gg.searchNumber('0', gg.TYPE_FLOAT)  -- Search for -10
+        gg.getResults(100)  -- Fetch results for -10
+
+        gg.alert('𝕊𝕖𝕥 𝕀𝕟𝕔𝕝𝕚𝕟𝕖 𝕋𝕠 𝟙𝟘')
+        gg.sleep(5000)  -- Wait for incline to go back to 10
+        gg.searchNumber('-10', gg.TYPE_FLOAT)  -- Search for -10
+        local results = gg.getResults(100)
+
+        if #results > 0 then
+            -- Apply the custom camber value based on input
+            gg.editAll(tostring(value), gg.TYPE_FLOAT)  -- Edit to custom camber value
+            gg.toast('𝕊𝕦𝕤𝕡𝕖𝕟𝕤𝕚𝕠𝕟 𝔸𝕕𝕛𝕦𝕤𝕥𝕖𝕕✅️')
+            gg.sleep(5000)
+            gg.clearResults()  -- Clear after edit
+            gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 𝕊𝕦𝕤𝕡𝕖𝕟𝕤𝕚𝕠𝕟 𝕄𝕖𝕟𝕦')
+            waitForGG(suspensionMenu)
+      
+        end
+    end
+end
+
+-- UFO Menu
+function ufoMode()
+    while true do
+        local choice = gg.choice({'𝕌𝔽𝕆 𝕄𝕆𝔻𝔼 𝟙 👽', ' 𝕌𝔽𝕆 𝕄𝕆𝔻𝔼 𝟚 👾', '𝕌𝔽𝕆 𝕄𝕆𝔻𝔼 𝟛🛸', '❌️𝔹𝕒𝕔𝕜'}, nil, '🛸𝕌𝔽𝕆 𝕄𝕖𝕟𝕦🛸')
+        if choice == nil or choice == 4 then
+            gg.toast("ℝ𝕖𝕥𝕦𝕣𝕟𝕚𝕟𝕘 𝕋𝕠 𝕊𝕦𝕤𝕡𝕖𝕟𝕤𝕚𝕠𝕟 𝕄𝕖𝕟𝕦.....")
+            return suspensionMenu() -- Returns to suspension menu when back is pressed
+        end
+
+        local ufoValues = {-90, -120, -180}
+        applyUfoPreset(ufoValues[choice])
+    end
+end
+
+function applyUfoPreset(value)
+    -- Pre-search step for UFO mode before applying
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.searchNumber('-10', gg.TYPE_FLOAT)
+    gg.getResults(100)  -- Just searching, not editing yet
+    gg.sleep(1000)
+    gg.clearResults()  -- Clear after the pre-search
+    
+    -- UFO Mode application steps
+    gg.alert('𝕊𝕖𝕥 𝕀𝕟𝕔𝕝𝕚𝕟𝕖 𝕋𝕠 𝟙𝟘')
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+    gg.sleep(15000)
+    gg.alert('𝕊𝕖𝕥 𝕀𝕟𝕔𝕝𝕚𝕟𝕖 𝕋𝕠 𝟘')
+    gg.sleep(5000)
+    gg.alert('𝕊𝕖𝕥 𝕀𝕟𝕔𝕝𝕚𝕟𝕖 𝕋𝕠 𝟙𝟘')
+    gg.sleep(5000)
+
+    gg.toast('𝔸𝕡𝕡𝕝𝕪𝕚𝕟𝕘 𝕌𝔽𝕆......')
+    
+    -- Main Search after Pre-search (searching the region)
+    gg.searchNumber('-10', gg.TYPE_FLOAT)  -- Main search after pre-search
+    local results = gg.getResults(100)
+
+    -- Ensure that there are results before applying the changes
+    if #results > 0 then
+        gg.editAll(tostring(value), gg.TYPE_FLOAT)
+        gg.sleep(4000)
+        gg.toast(' 𝕊𝕦𝕤𝕡𝕖𝕟𝕤𝕚𝕠𝕟 𝔸𝕕𝕛𝕦𝕤𝕥𝕖𝕕👽✅️')
+        gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 𝕊𝕦𝕤𝕡𝕖𝕟𝕤𝕚𝕠𝕟 𝕄𝕖𝕟𝕦')
+        waitForGG(suspensionMenu)
+    else
+        gg.alert('❌ UFO values not found! Try again.')
+    end
+
+    gg.sleep(5000)
+    gg.clearResults()
+end
+
+-- Steering Angle Menu
+function steeringAngleMenu()
+    while true do
+        local choice = gg.choice({
+            '🛠𝕊𝕥𝕖𝕖𝕣𝕚𝕟𝕘 𝔸𝕟𝕘𝕝𝕖 𝟙 (90°)', 
+            '🛠𝕊𝕥𝕖𝕖𝕣𝕚𝕟𝕘 𝔸𝕟𝕘𝕝𝕖 𝟚(110°)', 
+            '🛠𝕊𝕥𝕖𝕖𝕣𝕚𝕟𝕘 𝔸𝕟𝕘𝕝𝕖 𝟛(140°)', 
+            '❌️𝔹𝕒𝕔𝕜'
+        }, nil, '↪️𝕊𝕥𝕖𝕖𝕣𝕚𝕟𝕘 𝔸𝕟𝕘𝕝𝕖 𝕄𝕖𝕟𝕦↩️')
+
+        if choice == nil or choice == 4 then
+            gg.toast("ℝ𝕖𝕥𝕦𝕣𝕟𝕚𝕟𝕘 𝕋𝕠 𝕊𝕦𝕤𝕡𝕖𝕟𝕤𝕚𝕠𝕟 𝕄𝕖𝕟𝕦.....")
+            return suspensionMenu() -- Returns to suspension menu when back is pressed
+        end
+
+        local angles = {90, 110, 140}
+        applySteeringAngle(angles[choice])
+    end
+end
+
+function applySteeringAngle(value)
+    gg.alert('𝕄𝕠𝕧𝕖 𝕊𝕥𝕖𝕖𝕣𝕚𝕟𝕘 𝔸𝕟𝕘𝕝𝕖 𝕋𝕠 𝟞𝟘')
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+    gg.sleep(10000)
+    gg.searchNumber('60', gg.TYPE_FLOAT)
+    gg.getResults(100)
+
+    gg.alert('𝕄𝕠𝕧𝕖 𝕊𝕥𝕖𝕖𝕣𝕚𝕟𝕘 𝔸𝕟𝕘𝕝𝕖 𝕋𝕠 𝟛𝟘')
+    gg.sleep(5000)
+    gg.searchNumber('30', gg.TYPE_FLOAT)
+    local results = gg.getResults(100)
+
+    if #results > 0 then
+        gg.editAll(tostring(value), gg.TYPE_FLOAT)
+        gg.toast('✅ 𝕊𝕥𝕖𝕖𝕣𝕚𝕟𝕘 𝔸𝕟𝕘𝕝𝕖 𝔸𝕕𝕛𝕦𝕤𝕥𝕖𝕕!')
+    else
+        gg.alert('❌ Steering values not found! Try again.')
+    end
+
+    gg.sleep(5000)
+    gg.clearResults()
+    gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 𝕊𝕦𝕤𝕡𝕖𝕟𝕤𝕚𝕠𝕟 𝕄𝕖𝕟𝕦')
+    waitForGG(suspensionMenu)
+end
+
+function hpMenu()
+    while true do
+        local choice = gg.choice({
+            'ℍℙ ℙ𝕣𝕖𝕤𝕖𝕥𝕤 🔥', 
+            'ℂ𝕦𝕤𝕥𝕠𝕞 𝔼𝕟𝕘𝕚𝕟𝕖 𝕋𝕦𝕟𝕚𝕟𝕘 🛠', 
+            '𝔾𝕝𝕚𝕥𝕔𝕙 𝕊𝕡𝕖𝕖𝕕 𝕆𝕡𝕥𝕚𝕠𝕟𝕤⚡', 
+            '𝕊𝕙𝕚𝕗𝕥 𝕊𝕡𝕖𝕖𝕕 𝕆𝕡𝕥𝕚𝕠𝕟𝕤 🏁', 
+            '❌️𝔹𝕒𝕔𝕜'
+        }, nil, '🏎ℙ𝔼ℝ𝔽𝕆ℝ𝕄𝔸ℕℂ𝔼 𝕄𝔼ℕ𝕌🏎')
+
+        if choice == nil or choice == 5 then
+         gg.toast('ℝ𝕖𝕥𝕦𝕣𝕟𝕚𝕟𝕘 𝕋𝕠 𝕄𝕒𝕚𝕟 𝕄𝕖𝕟𝕦.....')
+         return mainMenu()
+    end
+
+        local actions = {hpPresetsMenu, customHPInput, glitchSpeed, shiftSpeedMenu}
+        if actions[choice] then actions[choice]() end
+
+    end
+end
+
+local hpPresets = {
+    {1695, 2300, 8000, 7998},
+    {414, 2300, 8000, 7998}, 
+    {300, 2300, 8000, 7998}, 
+    {299, 2300, 8000, 7998}, 
+    {1, 2300, 8000, 7998}, 
+    {-5000000, 2300, 8000, 7998}
+}
+
+function hpPresetsMenu()
+    local choice = gg.choice({
+        '𝟙𝟞𝟡𝟝𝕙𝕡🏴‍☠️', '𝟜𝟙𝟜𝕙𝕡 🚀', '𝟛𝟘𝟘𝕙𝕡 🏎', '𝟚𝟡𝟡𝕙𝕡 ✨', '𝟙𝕙𝕡 🥶', '-𝟝,𝟘𝟘𝟘,𝟘𝟘𝟘𝕙𝕡☠️', '❌️𝔹𝕒𝕔𝕜'
+    }, nil, '🚀ℍℙ ℙ𝕣𝕖𝕤𝕖𝕥 𝕄𝕖𝕟𝕦🚀')
+
+    if choice == nil or choice == 7 then 
+    gg.toast('ℝ𝕖𝕥𝕦𝕣𝕟𝕚𝕟𝕘 𝕋𝕠 ℙ𝕖𝕣𝕗𝕠𝕣𝕞𝕒𝕟𝕔𝕖 𝕄𝕖𝕟𝕦.....')
+    return hpMenu()
+end
+    applyHP(hpPresets[choice])
+
+    waitForGG()
+end
+
+function applyHP(preset)
+    gg.alert('𝔹𝕦𝕪 𝔼𝕟𝕘𝕚𝕟𝕖 𝕍𝟞 𝟛.𝟘')
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+    gg.sleep(15000)
+    gg.toast('𝔸𝕡𝕡𝕝𝕪𝕚𝕟𝕘 ℍℙ 𝕄𝕠𝕕𝕚𝕗𝕚𝕔𝕒𝕥𝕚𝕠𝕟 ....')
+
+    local searchValues = {240, 310, 6800, 4500}
+    local valueNames = {'HP', 'Torque', 'Inner HP', 'Inner Torque'}
+
+    for i = 1, 4 do
+        gg.setRanges(gg.REGION_ANONYMOUS)
+        gg.searchNumber(searchValues[i], gg.TYPE_FLOAT)
+        local results = gg.getResults(100)
+
+        if #results > 0 then
+            gg.editAll(preset[i], gg.TYPE_FLOAT)
+        else
+            gg.alert(valueNames[i] .. ' values not found! Try again.')
+        end
+        
+        gg.clearResults()
+    end
+
+    gg.alert('ℂ𝕝𝕚𝕔𝕜 𝕆𝕟 𝔼𝕟𝕘𝕚𝕟𝕖 𝕍𝟞 𝟛.𝟘')
+    gg.sleep(6000)
+    gg.alert('ℍℙ 𝔸𝕕𝕛𝕦𝕤𝕥𝕞𝕖𝕟𝕥 ℂ𝕠𝕞𝕡𝕝𝕖𝕥𝕖 !')
+
+    gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℙ𝕖𝕣𝕗𝕠𝕣𝕞𝕒𝕟𝕔𝕖 𝕄𝕖𝕟𝕦')
+    waitForGG(hpMenu)
+end
+
+
+function customHPInput()
+    gg.alert("𝔹𝕦𝕪 𝔸𝕟 𝔼𝕟𝕘𝕚𝕟𝕖 𝔸𝕟𝕕 ℝ𝕖𝕞𝕖𝕞𝕓𝕖𝕣 𝕋𝕠𝕣𝕢𝕦𝕖 𝔸𝕟𝕕 ℍℙ (𝕋𝕠 𝕋𝕦𝕟𝕖 𝕎𝕚𝕥𝕙 ℕ𝕠 𝔼𝕟𝕘𝕚𝕟𝕖 ℝ𝕖𝕞𝕖𝕞𝕓𝕖𝕣 ℝ𝕖𝕤𝕖𝕥 𝔼𝕟𝕘𝕚𝕟𝕖 𝔸𝕟𝕕 𝕌𝕤𝕖 𝕊𝕥𝕠𝕔𝕜 ℍℙ. 𝔸𝕕𝕕 𝕋𝕦𝕣𝕓𝕠 𝔽𝕠𝕣 𝕋𝕦𝕣𝕓𝕠 𝕊𝕠𝕦𝕟𝕕/ℙ𝕠𝕡𝕤")
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤...')
+    gg.sleep(10000)
+
+    local input = gg.prompt({
+        'Current HP:', 'New HP:', 
+        'Current Torque:', 'New Torque:', 
+        'Current Inner HP:', 'New Inner HP:', 
+        'Current Inner Torque:', 'New Inner Torque:'
+    }, {}, {'number', 'number', 'number', 'number', 'number', 'number', 'number', 'number'})
+
+    if not input then return end
+
+    local values = {
+        {input[1], input[2]}, 
+        {input[3], input[4]}, 
+        {input[5], input[6]}, 
+        {input[7], input[8]}  
+    }
+
+    for i, v in ipairs(values) do
+        gg.setRanges(gg.REGION_ANONYMOUS)
+        gg.searchNumber(v[1], gg.TYPE_FLOAT)
+        local results = gg.getResults(100)
+
+        if #results > 0 then
+            gg.editAll(v[2], gg.TYPE_FLOAT)
+        else
+            gg.alert("Value not found! Try again.")
+        end
+        gg.clearResults()
+    end
+
+    gg.alert("ℂ𝕝𝕚𝕔𝕜 𝕠𝕟 𝔹𝕠𝕦𝕘𝕙𝕥 𝔼𝕟𝕘𝕚𝕟𝕖 𝕆𝕣 𝔹𝕦𝕪 𝕋𝕚𝕣𝕖𝕤 𝕆𝕣 𝔹𝕣𝕒𝕜𝕖𝕤 𝕀𝕗 𝕋𝕦𝕟𝕖𝕕 𝕎𝕚𝕥𝕙 𝕊𝕥𝕠𝕔𝕜 𝔼𝕟𝕘𝕚𝕟𝕖")
+    gg.sleep(6000)
+    gg.alert("ℍℙ 𝔸𝕕𝕛𝕦𝕤𝕥𝕞𝕖𝕟𝕥 ℂ𝕠𝕞𝕡𝕝𝕖𝕥𝕖 !")
+
+    gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℙ𝕖𝕣𝕗𝕠𝕣𝕞𝕒𝕟𝕔𝕖 𝕄𝕖𝕟𝕦')
+    waitForGG(hpMenu)
+end
+
+
+-- GLITCH SPEED MENU
+off = " 🔴⃢  "
+on = "      ⃢🔵"
+GLITCH1 = off
+GLITCH2 = off
+GLITCH3 = off
+GLITCH4 = off
+
+function glitchSpeed()
+    local choice = gg.choice({
+        "⚡️𝟙𝟙𝟚𝟝𝕙𝕡" .. GLITCH1,
+        "⚡️𝟚𝟘𝟘𝟘𝕙𝕡" .. GLITCH2,
+        "⚡️𝟙𝟞𝟡𝟝𝕙𝕡" .. GLITCH3,
+        "⚡️𝟙𝟚𝟛𝟜𝕙𝕡" .. GLITCH4,
+        "Exit"
+    }, nil, "⚡️𝔾𝕝𝕚𝕥𝕔𝕙 𝕄𝕖𝕟𝕦⚡️")
+
+    if choice == nil or choice == 5 then
+        gg.toast('ℝ𝕖𝕥𝕦𝕣𝕟𝕚𝕟𝕘 𝕋𝕠 ℙ𝕖𝕣𝕗𝕠𝕣𝕞𝕒𝕟𝕔𝕖 𝕄𝕖𝕟𝕦....')
+        return hpMenu()
+    end
+
+    -- Toggle logic for glitch selections
+    if choice == 1 then
+        if GLITCH1 == on then
+            GL1()
+            GLITCH1 = off
+        else
+            GL2()
+            GLITCH1 = on
+        end
+    elseif choice == 2 then
+        if GLITCH2 == on then
+            GL3()
+            GLITCH2 = off
+        else
+            GL4()
+            GLITCH2 = on
+        end
+    elseif choice == 3 then
+        if GLITCH3 == on then
+            GL5()
+            GLITCH3 = off
+        else
+            GL6()
+            GLITCH3 = on
+        end
+    elseif choice == 4 then
+        if GLITCH4 == on then
+            GL7()
+            GLITCH4 = off
+        else
+            GL8()
+            GLITCH4 = on
+        end
+    end
+
+gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 𝔾𝕝𝕚𝕥𝕔𝕙 𝕊𝕡𝕖𝕖𝕕 𝕄𝕖𝕟𝕦')
+waitForGG(glitchSpeed)
+end
+
+function GL1()
+    gg.setVisible(false)
+    gg.alert("𝔹𝕦𝕪 𝔼𝕟𝕘𝕚𝕟𝕖 𝕍𝟞 𝟛.𝟘 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 𝕊𝕥𝕒𝕣𝕥")
+    gg.toast("ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 𝕊𝕥𝕒𝕣𝕥")
+    gg.clearResults()
+    gg.clearList()
+    
+    while not gg.isVisible() do end
+    gg.setVisible(false)
+
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.searchNumber("6800", gg.TYPE_FLOAT)
+    gg.getResults(1000)
+    gg.editAll("1001", gg.TYPE_FLOAT)
+    
+    gg.clearResults()
+    gg.searchNumber("240", gg.TYPE_FLOAT)
+    gg.getResults(1000)
+    gg.editAll("1125", gg.TYPE_FLOAT)
+    
+    gg.clearResults()
+    gg.searchNumber("310", gg.TYPE_FLOAT)
+    gg.getResults(1000)
+    gg.editAll("2225", gg.TYPE_FLOAT)
+
+    gg.clearResults()
+    gg.searchNumber("4500", gg.TYPE_FLOAT)
+    gg.getResults(1000)
+    gg.editAll("1000", gg.TYPE_FLOAT)
+
+    gg.setRanges(gg.REGION_CODE_APP)
+    gg.clearResults()
+    gg.searchNumber("0.1", gg.TYPE_FLOAT)
+    gg.getResults(1000)
+    gg.editAll("1E-12", gg.TYPE_FLOAT)
+
+    gg.clearResults()
+    gg.alert("ℂ𝕝𝕚𝕔𝕜 𝕊𝕖𝕥 𝔸𝕟𝕕 𝕊𝕖𝕥 𝔽𝕒𝕤𝕥 𝔾𝕖𝕒𝕣𝕓𝕠𝕩 ")
+    gg.toast("𝔻𝕠𝕟𝕖✅")
+end
+
+function GL2()
+    gg.setVisible(true)
+end
+
+function GL3()
+    gg.setVisible(false)
+    gg.alert("𝔹𝕦𝕪 𝔼𝕟𝕘𝕚𝕟𝕖 𝕍𝟞 𝟛.𝟝 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 𝕊𝕥𝕒𝕣𝕥")
+    gg.toast("ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 𝕊𝕥𝕒𝕣𝕥")
+    gg.clearResults()
+    gg.clearList()
+    
+    while not gg.isVisible() do end
+    gg.setVisible(false)
+
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.searchNumber("280", gg.TYPE_FLOAT)
+    gg.getResults(1000)
+    gg.editAll("2000", gg.TYPE_FLOAT)
+    
+    gg.clearResults()
+    gg.searchNumber("6300", gg.TYPE_FLOAT)
+    gg.getResults(1000)
+    gg.editAll("1001", gg.TYPE_FLOAT)
+    
+    gg.clearResults()
+    gg.searchNumber("350", gg.TYPE_FLOAT)
+    gg.getResults(1000)
+    gg.editAll("3000", gg.TYPE_FLOAT)
+
+    gg.clearResults()
+    gg.searchNumber("4700", gg.TYPE_FLOAT)
+    gg.getResults(1000)
+    gg.editAll("1000", gg.TYPE_FLOAT)
+
+    gg.setRanges(gg.REGION_CODE_APP)
+    gg.clearResults()
+    gg.searchNumber("0.1", gg.TYPE_FLOAT)
+    gg.getResults(1000)
+    gg.editAll("1E-42", gg.TYPE_FLOAT)
+
+    gg.clearResults()
+    gg.alert("ℂ𝕝𝕚𝕔𝕜 𝕊𝕖𝕥 𝔸𝕟𝕕 𝕊𝕖𝕥 𝔽𝕒𝕤𝕥 𝔾𝕖𝕒𝕣𝕓𝕠𝕩 ")
+    gg.toast("𝔻𝕠𝕟𝕖 ✅")
+end
+
+function GL4()
+    gg.setVisible(true)
+end
+
+function GL5()
+    gg.setVisible(false)
+    gg.alert("𝔹𝕦𝕪 𝔼𝕟𝕘𝕚𝕟𝕖 𝕍𝟠 𝟜.𝟝 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 𝕊𝕥𝕒𝕣𝕥")
+    gg.toast("ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 𝕊𝕥𝕒𝕣𝕥")
+    gg.clearResults()
+    gg.clearList()
+    
+    while not gg.isVisible() do end
+    gg.setVisible(false)
+
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.searchNumber("7000", gg.TYPE_FLOAT)
+    gg.getResults(1000)
+    gg.editAll("1001", gg.TYPE_FLOAT)
+    
+    gg.clearResults()
+    gg.searchNumber("4000", gg.TYPE_FLOAT)
+    gg.getResults(1000)
+    gg.editAll("1000", gg.TYPE_FLOAT)
+    
+    gg.clearResults()
+    gg.searchNumber("415", gg.TYPE_FLOAT)
+
+gg.getResults(1000)
+    gg.editAll("1695", gg.TYPE_FLOAT)
+
+    gg.clearResults()
+    gg.searchNumber("430", gg.TYPE_FLOAT)
+    gg.getResults(1000)
+    gg.editAll("2254", gg.TYPE_FLOAT)
+
+    gg.setRanges(gg.REGION_CODE_APP)
+    gg.clearResults()
+    gg.searchNumber("0.1", gg.TYPE_FLOAT)
+    gg.getResults(1000)
+    gg.editAll("1E-44", gg.TYPE_FLOAT)
+
+    gg.clearResults()
+    gg.alert("ℂ𝕝𝕚𝕔𝕜 𝕊𝕖𝕥 𝔸𝕟𝕕 𝕊𝕖𝕥 𝔽𝕒𝕤𝕥 𝔾𝕖𝕒𝕣𝕓𝕠𝕩 ")
+    gg.toast("𝔻𝕠𝕟𝕖✅")
+end
+
+function GL6()
+    gg.setVisible(true)
+end
+
+function GL7()
+    gg.setVisible(false)
+    gg.alert("𝔹𝕦𝕪 𝔼𝕟𝕘𝕚𝕟𝕖 𝕍𝟞 𝟛.𝟘 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 𝕊𝕥𝕒𝕣𝕥")
+    gg.toast("ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 𝕊𝕥𝕒𝕣𝕥")
+    gg.clearResults()
+    gg.clearList()
+    
+    while not gg.isVisible() do end
+    gg.setVisible(false)
+
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.searchNumber("6800", gg.TYPE_FLOAT)
+    gg.getResults(1000)
+    gg.editAll("1001", gg.TYPE_FLOAT)
+    
+    gg.clearResults()
+    gg.searchNumber("240", gg.TYPE_FLOAT)
+    gg.getResults(1000)
+    gg.editAll("1234", gg.TYPE_FLOAT)
+    
+    gg.clearResults()
+    gg.searchNumber("310", gg.TYPE_FLOAT)
+    gg.getResults(1000)
+    gg.editAll("2245", gg.TYPE_FLOAT)
+
+    gg.clearResults()
+    gg.searchNumber("4500", gg.TYPE_FLOAT)
+    gg.getResults(1000)
+    gg.editAll("1000", gg.TYPE_FLOAT)
+
+    gg.setRanges(gg.REGION_CODE_APP)
+    gg.clearResults()
+    gg.searchNumber("0.1", gg.TYPE_FLOAT)
+    gg.getResults(1000)
+    gg.editAll("1E-12", gg.TYPE_FLOAT)
+
+    gg.clearResults()
+    gg.alert("ℂ𝕝𝕚𝕔𝕜 𝕊𝕖𝕥 𝔸𝕟𝕕 𝕊𝕖𝕥 𝔽𝕒𝕤𝕥 𝔾𝕖𝕒𝕣𝕓𝕠𝕩 ")
+    gg.toast("𝔻𝕠𝕟𝕖✅")
+end
+
+function GL8()
+    gg.setVisible(true)
+end
+
+
+
+function shiftSpeedMenu()
+    local choice = gg.choice({'𝟙𝔼-𝟚𝟠🚀','𝟙𝔼-𝟚𝟡🥇','𝟙𝔼-𝟛𝟘🔥' ,'𝟙𝔼-𝟛𝟙🏁','𝟙𝔼-𝟛𝟚🏆','𝟙𝔼-𝟛𝟛🏴‍☠️', '❌️𝔹𝕒𝕔𝕜'}, nil, '🏆𝕊𝕙𝕚𝕗𝕥 𝕊𝕡𝕖𝕖𝕕 𝕄𝕖𝕟𝕦🏆')
+
+    if choice == nil or choice == 7 then 
+    gg.toast('ℝ𝕖𝕥𝕦𝕣𝕟𝕚𝕟𝕘 𝕋𝕠 ℙ𝕖𝕣𝕗𝕠𝕣𝕞𝕒𝕟𝕔𝕖 𝕄𝕖𝕟𝕦.....')
+    return hpMenu()
+ end
+
+   if choice == 1 then
+shiftSpeed1()
+  elseif choice == 2 then
+ shiftSpeed2()
+elseif choice == 3 then
+shiftSpeed3()
+elseif choice == 4 then
+shiftSpeed4()
+elseif choice == 5 then
+shiftSpeed5()
+elseif choice == 6 then
+shiftSpeed6()
+  end
+end
+
+
+
+function shiftSpeed1()
+    gg.setRanges(gg.REGION_CODE_APP)
+    gg.alert('BUY FAST GEARBOX')
+    gg.sleep(7000)
+    gg.searchNumber('0.1', gg.TYPE_FLOAT)
+    local results = gg.getResults(250)
+
+    if #results > 0 then
+        gg.sleep(2000)
+        gg.editAll('1E-28', gg.TYPE_FLOAT)
+        gg.alert('𝔹𝕦𝕪 𝕗𝕒𝕤𝕥 𝕘𝕖𝕒𝕣𝕓𝕠𝕩')
+        gg.sleep(4000) --Time to buy shift speed
+    else
+        gg.alert('Shift Speed values not found! Try again.')
+    end
+
+    gg.clearResults()
+    gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℙ𝕖𝕣𝕗𝕠𝕣𝕞𝕒𝕟𝕔𝕖 𝕄𝕖𝕟𝕦')
+    waitForGG(hpMenu)
+end
+
+function shiftSpeed2()
+    gg.setRanges(gg.REGION_CODE_APP)
+    gg.alert('BUY FAST GEARBOX')
+    gg.sleep(7000)
+    gg.searchNumber('0.1', gg.TYPE_FLOAT)
+    local results = gg.getResults(250)
+
+    if #results > 0 then
+        gg.sleep(2000)
+        gg.editAll('1E-29', gg.TYPE_FLOAT)
+        gg.alert('𝔹𝕦𝕪 𝕗𝕒𝕤𝕥 𝕘𝕖𝕒𝕣𝕓𝕠𝕩')
+        gg.sleep(4000) --Time to buy shift speed
+    else
+        gg.alert('Shift Speed values not found! Try again.')
+    end
+
+    gg.clearResults()
+    gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℙ𝕖𝕣𝕗𝕠𝕣𝕞𝕒𝕟𝕔𝕖 𝕄𝕖𝕟𝕦')
+    waitForGG(hpMenu)
+end
+
+function shiftSpeed3()
+    gg.setRanges(gg.REGION_CODE_APP)
+    gg.alert('BUY FAST GEARBOX')
+    gg.sleep(7000)
+    gg.searchNumber('0.1', gg.TYPE_FLOAT)
+    local results = gg.getResults(250)
+
+    if #results > 0 then
+        gg.sleep(2000)
+        gg.editAll('1E-30', gg.TYPE_FLOAT)
+        gg.alert('𝔹𝕦𝕪 𝕗𝕒𝕤𝕥 𝕘𝕖𝕒𝕣𝕓𝕠𝕩')
+        gg.sleep(4000) --Time to buy shift speed
+    else
+        gg.alert('Shift Speed values not found! Try again.')
+    end
+
+    gg.clearResults()
+    gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℙ𝕖𝕣𝕗𝕠𝕣𝕞𝕒𝕟𝕔𝕖 𝕄𝕖𝕟𝕦')
+    waitForGG(hpMenu)
+end
+
+function shiftSpeed4()
+    gg.setRanges(gg.REGION_CODE_APP)
+    gg.alert('BUY FAST GEARBOX')
+    gg.sleep(7000)
+    gg.searchNumber('0.1', gg.TYPE_FLOAT)
+    local results = gg.getResults(250)
+
+    if #results > 0 then
+        gg.sleep(2000)
+        gg.editAll('1E-31', gg.TYPE_FLOAT)
+        gg.alert('𝔹𝕦𝕪 𝕗𝕒𝕤𝕥 𝕘𝕖𝕒𝕣𝕓𝕠𝕩')
+        gg.sleep(4000) --Time to buy shift speed
+    else
+        gg.alert('Shift Speed values not found! Try again.')
+    end
+
+    gg.clearResults()
+    gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℙ𝕖𝕣𝕗𝕠𝕣𝕞𝕒𝕟𝕔𝕖 𝕄𝕖𝕟𝕦')
+    waitForGG(hpMenu)
+end
+
+function shiftSpeed5()
+    gg.setRanges(gg.REGION_CODE_APP)
+    gg.alert('BUY FAST GEARBOX')
+    gg.sleep(7000)
+    gg.searchNumber('0.1', gg.TYPE_FLOAT)
+    local results = gg.getResults(250)
+
+    if #results > 0 then
+        gg.sleep(2000)
+        gg.editAll('1E-32', gg.TYPE_FLOAT)
+        gg.alert('𝔹𝕦𝕪 𝕗𝕒𝕤𝕥 𝕘𝕖𝕒𝕣𝕓𝕠𝕩')
+        gg.sleep(4000) --Time to buy shift speed
+    else
+        gg.alert('Shift Speed values not found! Try again.')
+    end
+
+    gg.clearResults()
+    gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℙ𝕖𝕣𝕗𝕠𝕣𝕞𝕒𝕟𝕔𝕖 𝕄𝕖𝕟𝕦')
+    waitForGG(hpMenu)
+end
+
+function shiftSpeed6()
+    gg.setRanges(gg.REGION_CODE_APP)
+    gg.alert('BUY FAST GEARBOX')
+    gg.sleep(7000)
+    gg.searchNumber('0.1', gg.TYPE_FLOAT)
+    local results = gg.getResults(250)
+
+    if #results > 0 then
+        gg.sleep(2000)
+        gg.editAll('1E-33', gg.TYPE_FLOAT)
+        gg.alert('𝔹𝕦𝕪 𝕗𝕒𝕤𝕥 𝕘𝕖𝕒𝕣𝕓𝕠𝕩')
+        gg.sleep(4000) --Time to buy shift speed
+    else
+        gg.alert('Shift Speed values not found! Try again.')
+    end
+
+    gg.clearResults()
+    gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 ℙ𝕖𝕣𝕗𝕠𝕣𝕞𝕒𝕟𝕔𝕖 𝕄𝕖𝕟𝕦')
+    waitForGG(hpMenu)
+end
+
+function bodyKitMenu()
+    while true do
+        local choice = gg.choice({
+            'ℕ𝕠 𝔹𝕦𝕞𝕡𝕖𝕣 𝕄𝕖𝕟𝕦 🚗', 
+            'ℂ𝕦𝕤𝕥𝕠𝕞 𝕊𝕡𝕠𝕚𝕝𝕖𝕣 𝕂𝕚𝕥🏁', 
+            '𝕊𝕜𝕚 𝔹𝕠𝕩 ⛷️', 
+            '𝕊𝕥𝕖𝕖𝕝 ℝ𝕠𝕠𝕗 ℝ𝕒𝕔𝕜🏗️', 
+            '𝔾𝕒𝕡 ℂ𝕒𝕞 🏎', 
+            '𝕀𝕟𝕥𝕖𝕣𝕚𝕠𝕣 𝕊𝕥𝕖𝕖𝕝 𝔹𝕒𝕣𝕤🏛', 
+            'ℝ𝕠𝕠𝕗 𝕃𝕚𝕘𝕙𝕥𝕤🔦', 
+            'ℙ𝕠𝕝𝕚𝕔𝕖 𝔹𝕒𝕤𝕙 𝔹𝕒𝕣 🚔', 
+            'ℂ𝕦𝕤𝕥𝕠𝕞 ℝ𝕠𝕠𝕗 𝕊𝕖𝕝𝕖𝕔𝕥𝕚𝕠𝕟 🏠',
+            '𝕎𝕚𝕟𝕘𝕤 𝔸𝕟𝕕 𝕊𝕡𝕠𝕚𝕝𝕖𝕣𝕤✈️',
+            '❌️𝔹𝕒𝕔𝕜'
+        }, nil, '🚘𝔹𝕠𝕕𝕪 𝕂𝕚𝕥 𝕄𝕖𝕟𝕦🚘')
+
+        if choice == nil or choice == 11 then
+       gg.toast('ℝ𝕖𝕥𝕦𝕣𝕟𝕚𝕟𝕘 𝕋𝕠 𝕄𝕒𝕚𝕟 𝕄𝕖𝕟𝕦')
+       return mainMenu()
+   end
+
+        local actions = {
+            noBumper, customSpoilerKit, skiBox, 
+            steelRoofRack, gapCam, interiorSteelBars, 
+            roofLights, policeBashBar, customRoofSelection, wingsMenu
+        }
+        
+        if actions[choice] then actions[choice]() end
+
+        waitForGG(bodyKitMenu)
+    end
+end
+
+function noBumper()
+    gg.alert('𝔹𝕦𝕪 𝔸𝕝𝕝 𝔹𝕦𝕞𝕡𝕖𝕣𝕤 𝕋𝕙𝕖𝕟 𝔹𝕦𝕪 #𝟙')
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟚𝟘 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+    gg.sleep(20000) 
+    
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.searchNumber('0', gg.TYPE_DWORD)
+    gg.getResults(100)
+    
+    gg.alert('Buy #2')
+    gg.sleep(5000)
+    gg.searchNumber('1', gg.TYPE_DWORD)
+    gg.getResults(100)
+
+    gg.alert('Buy #3')
+    gg.sleep(5000)
+    gg.searchNumber('2', gg.TYPE_DWORD)
+    gg.getResults(100)
+
+    gg.alert('Buy #4')
+    gg.sleep(5000)
+    gg.searchNumber('3', gg.TYPE_DWORD)
+    gg.getResults(100)
+
+    gg.editAll('-1', gg.TYPE_DWORD)
+
+    gg.alert('𝔾𝕠 𝕋𝕠 𝔸𝕟𝕠𝕥𝕙𝕖𝕣 ℂ𝕒𝕣 𝔸𝕟𝕕 ℂ𝕠𝕞𝕖 𝔹𝕒𝕔𝕜')
+    gg.sleep(5000)
+    gg.toast('ℕ𝕠 𝔹𝕦𝕞𝕡𝕖𝕣 𝔸𝕡𝕡𝕝𝕚𝕖𝕕💯')
+
+    gg.clearResults()
+    gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 𝔹𝕠𝕕𝕪 𝕂𝕚𝕥 𝕄𝕖𝕟𝕦')
+    waitForGG(bodyKitMenu)
+end
+
+function customSpoilerKit()
+    applyCustomBodyKitPart("ℂ𝕦𝕤𝕥𝕠𝕞 𝕊𝕡𝕠𝕚𝕝𝕖𝕣", "𝕊𝕖𝕝𝕖𝕔𝕥 𝔸 𝕎𝕚𝕟𝕘", true)
+end
+
+function customRoofSelection()
+    applyCustomBodyKitPart("ℂ𝕦𝕤𝕥𝕠𝕞 ℝ𝕠𝕠𝕗", "𝕊𝕖𝕝𝕖𝕔𝕥 ℝ𝕠𝕠𝕗 ℙ𝕒𝕣𝕥", true)
+end
+
+function skiBox()
+    applyBodyKitPart("𝕊𝕜𝕚 𝔹𝕠𝕩", "𝕊𝕖𝕝𝕖𝕔𝕥 ℝ𝕠𝕠𝕗 / ℍ𝕠𝕠𝕕 ℙ𝕒𝕣𝕥", true, 150)
+end
+
+function steelRoofRack()
+    applyBodyKitPart("𝕊𝕥𝕖𝕖𝕝 ℝ𝕠𝕠𝕗 ℝ𝕒𝕔𝕜", "𝕊𝕖𝕝𝕖𝕔𝕥 ℝ𝕠𝕠𝕗 / ℍ𝕠𝕠𝕕 ℙ𝕒𝕣𝕥", false, 69)
+end
+
+function gapCam()
+    applyBodyKitPart("𝔾𝕒𝕡 ℂ𝕒𝕞", "𝕊𝕖𝕝𝕖𝕔𝕥 ℝ𝕠𝕠𝕗 / ℍ𝕠𝕠𝕕 ℙ𝕒𝕣𝕥", false, 34)
+end
+
+function interiorSteelBars()
+    applyBodyKitPart("𝕀𝕟𝕥𝕖𝕣𝕚𝕠𝕣 𝕊𝕥𝕖𝕖𝕝 𝔹𝕒𝕣𝕤", "𝕊𝕖𝕝𝕖𝕔𝕥 ℝ𝕠𝕠𝕗 / ℍ𝕠𝕠𝕕 ℙ𝕒𝕣𝕥", false, 39)
+end
+
+function roofLights()
+    applyBodyKitPart("ℝ𝕠𝕠𝕗 𝕃𝕚𝕘𝕙𝕥𝕤 ", "𝕊𝕖𝕝𝕖𝕔𝕥 ℝ𝕠𝕠𝕗 / ℍ𝕠𝕠𝕕 ℙ𝕒𝕣𝕥", true, 56)
+end
+
+function policeBashBar()
+    applyBodyKitPart("ℙ𝕠𝕝𝕚𝕔𝕖 𝔹𝕒𝕤𝕙 𝔹𝕒𝕣", "𝕊𝕖𝕝𝕖𝕔𝕥 ℝ𝕠𝕠𝕗 / ℍ𝕠𝕠𝕕 ℙ𝕒𝕣𝕥", false, 77)
+end
+
+function wingsMenu()
+    local choice = gg.choice({
+        '𝕄𝕦𝕤𝕥𝕒𝕟𝕘 𝕎𝕚𝕟𝕘 🐎', 
+        '𝕀𝕟𝕗𝕚𝕟𝕚𝕥𝕚 𝔾𝟛𝟟 𝕎𝕚𝕟𝕘 ♾️',
+        '𝕃𝕒𝕞𝕓𝕠 𝕎𝕚𝕟𝕘🇮🇹', 
+        '𝔼𝕂𝟡 ℂ𝕚𝕧𝕚𝕔 𝕎𝕚𝕟𝕘 🛞', 
+        '𝕆𝕝𝕕 ℂ𝕙𝕒𝕣𝕘𝕖𝕣 𝕃𝕚𝕡 🏴‍☠️', 
+        'ℂ𝕙𝕒𝕝𝕝𝕖𝕟𝕘𝕖𝕣 𝕃??𝕡 🔪', 
+        '𝕊𝕚𝕝𝕧𝕚𝕒 𝕊𝟙𝟛 𝕎𝕚𝕟𝕘 🦅', 
+        '𝕊𝕚𝕝𝕧𝕚𝕒 𝕊𝟙𝟛 𝕃𝕚𝕡 🕊', 
+        '𝔼𝕔𝕝𝕚𝕡𝕤𝕖 𝕎𝕚𝕟𝕘 🌒', 
+        '𝕃𝕖𝕩𝕦𝕤 𝕃𝔽𝔸 𝕎𝕚𝕟𝕘 ☢️', 
+        '❌️𝔹𝕒𝕔𝕜'
+    }, nil, '🪽𝕎𝕀ℕ𝔾𝕊 𝔸ℕ𝔻 𝕊ℙ𝕆𝕀𝕃𝔼ℝ 𝕄𝔼ℕ𝕌🪽')
+
+    if choice == nil or choice == 11 then
+    gg.toast('ℝ𝕖𝕥𝕦𝕣𝕟𝕚𝕟𝕘 𝕋𝕠 𝔹𝕠𝕕𝕪 𝕂𝕚𝕥 𝕄𝕖𝕟𝕦')
+    return bodyKitMenu()
+ end
+
+    local wingCodes = {
+        127, 96, 172, 106, 121, 
+        186, 176, 177, 182, 92
+    }
+
+    applyBodyKitPart("𝕎𝕚𝕟𝕘", "𝕊𝕖𝕝𝕖𝕔𝕥 𝔸 𝕎𝕚𝕟𝕘", true, wingCodes[choice])
+end
+
+function applyBodyKitPart(partName, selectionMessage, canGlow, partCode)
+    gg.alert('𝔾𝕠 𝕋𝕠 𝔸𝕟𝕪 ℂ𝕒𝕣 𝕎𝕚𝕥𝕙 𝔹𝕠𝕕𝕪 𝕂𝕚𝕥 𝕋𝕙𝕖𝕟 𝔹𝕦𝕪 𝔹𝕦𝕞𝕡𝕖𝕣 #𝟙 𝕒𝕟𝕕 𝕔𝕝𝕚𝕔𝕜  #𝟚')
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟚𝟘 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+    gg.sleep(20000)
+    gg.toast('𝔽𝕚𝕟𝕕𝕚𝕟𝕘 𝕍𝕒𝕝𝕦𝕖𝕤...')
+    
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.searchNumber('1', gg.TYPE_DWORD)
+    local results = gg.getResults(100)
+
+    if #results > 0 then
+        gg.alert('ℂ𝕝𝕚𝕔𝕜 𝔹𝕦𝕞𝕡𝕖𝕣 #𝟛')
+        gg.sleep(4000)
+        gg.searchNumber('2', gg.TYPE_DWORD)
+        gg.getResults(100)
+
+        gg.alert('ℂ𝕝𝕚𝕔𝕜 𝔹𝕦𝕞𝕡𝕖𝕣 #𝟜')
+        gg.sleep(4000)
+        gg.searchNumber('3', gg.TYPE_DWORD)
+        gg.getResults(100)
+
+        gg.alert('𝔹𝕦𝕪 𝔹𝕦𝕞𝕡𝕖𝕣 𝔸𝕟𝕕 𝔾𝕠 𝕋𝕠 ℂ𝕒𝕣 𝕐𝕠𝕦 𝕎𝕒𝕟𝕥 ' .. partName)
+        gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟚𝟘 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+        gg.sleep(20000)
+        gg.alert(selectionMessage)
+        gg.sleep(6000)
+
+        if partCode then
+            gg.editAll(partCode, gg.TYPE_DWORD)
+            finalizePart(canGlow)
+        else
+            gg.alert("Error: Part code missing!")
+        end
+    else
+        gg.alert(partName .. ' values not found! Try again.')
+    end
+
+    gg.clearResults()
+    gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 𝔹𝕠𝕕𝕪 𝕂𝕚𝕥 𝕄𝕖𝕟𝕦')
+    waitForGG(bodyKitMenu)
+end
+
+function applyCustomBodyKitPart(partName, selectionMessage, canGlow)
+    gg.alert('𝔾𝕠 𝕋𝕠 𝔸𝕟𝕪 ℂ𝕒𝕣 𝕎𝕚𝕥𝕙 𝔹𝕠𝕕𝕪 𝕂𝕚𝕥 𝕋𝕙𝕖𝕟 𝔹𝕦𝕪 𝔹𝕦𝕞𝕡𝕖𝕣 #𝟙 𝕒𝕟𝕕 𝕔𝕝𝕚𝕔𝕜  #𝟚')
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟚𝟘 𝕊𝕖𝕔𝕠𝕟𝕕𝕤..')
+    gg.sleep(20000)
+    gg.toast('𝔽𝕚𝕟𝕕𝕚𝕟𝕘 𝕍𝕒𝕝𝕦𝕖𝕤...')
+    
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.searchNumber('1', gg.TYPE_DWORD)
+    local results = gg.getResults(100)
+
+    if #results > 0 then
+        gg.alert('ℂ𝕝𝕚𝕔𝕜 𝔹𝕦𝕞𝕡𝕖𝕣 #𝟛')
+        gg.sleep(4000)
+        gg.searchNumber('2', gg.TYPE_DWORD)
+        gg.getResults(100)
+
+        gg.alert('ℂ𝕝𝕚𝕔𝕜 𝔹𝕦𝕞𝕡𝕖𝕣 #𝟜')
+        gg.sleep(4000)
+        gg.searchNumber('3', gg.TYPE_DWORD)
+        gg.getResults(100)
+
+        gg.alert('𝔹𝕦𝕪 𝔹𝕦𝕞𝕡𝕖𝕣 𝔸𝕟𝕕 𝔾𝕠 𝕋𝕠 ℂ𝕒𝕣 𝕐𝕠𝕦 𝕎𝕒𝕟𝕥 ' .. partName)
+        gg.toast('You Have 15 Seconds')
+        gg.sleep(15000)
+        gg.alert(selectionMessage)
+        gg.sleep(6000)
+
+        local input = gg.prompt({"Enter Custom Code for " .. partName}, {0}, {"number"})
+        if input and input[1] then
+            gg.editAll(input[1], gg.TYPE_DWORD)
+            finalizePart(canGlow)
+        else
+            gg.alert('No code entered! Process canceled.')
+        end
+    else
+        gg.alert(partName .. ' values not found! Try again.')
+    end
+
+    gg.clearResults()
+    gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 𝔹𝕠𝕕𝕪 𝕂𝕚𝕥 𝕄𝕖𝕟𝕦')
+    waitForGG(bodyKitMenu)
+end
+
+function finalizePart(canGlow)
+    if canGlow then
+        local finalizeChoice = gg.choice({
+            "✅️𝕐𝕖𝕤 - 𝔹𝕦𝕪 ℙ𝕒𝕣𝕥 ℕ𝕠𝕨",
+            "🛠ℕ𝕠 - 𝔾𝕠 𝕋𝕠 𝔾𝕝𝕠𝕨 𝕄𝕖𝕟𝕦 𝔽𝕚𝕣𝕤𝕥",
+            "❌️𝔹𝕒𝕔𝕜 - ℂ𝕒𝕟𝕔𝕖𝕝"
+        }, nil, "ℂ𝕝𝕚𝕔𝕜 𝕐𝕖𝕤 𝕋𝕠 𝔹𝕦𝕪 ℙ𝕒𝕣𝕥 ℕ𝕠𝕨 𝕆𝕣 ℂ𝕝𝕚𝕔𝕜 ℕ𝕠 𝕋𝕠 𝔾𝕠 𝕋𝕠 𝔾𝕝𝕠𝕨 𝕄𝕖𝕟𝕦 𝔽𝕚𝕣𝕤𝕥 𝕋𝕠 𝕄𝕒𝕜𝕖 𝔾𝕝𝕠𝕨 𝕋𝕙𝕖𝕟 𝔹𝕦𝕪 (𝔻𝕠𝕟'𝕥 ℂ𝕙𝕒𝕟𝕘𝕖 𝕎𝕚𝕟𝕘 )")
+
+        if finalizeChoice == 1 then
+            gg.alert("𝔹𝕦𝕪 ℙ𝕒𝕣𝕥 ℕ𝕠𝕨")
+            gg.sleep(10000)
+        elseif finalizeChoice == 2 then
+            gg.alert("ℕ𝕠𝕨 ℂ𝕝𝕚𝕔𝕜 𝔾𝕝𝕠𝕨 𝕎𝕚𝕟𝕘 / ℝ𝕠𝕠𝕗 𝔸𝕟𝕕 𝔻𝕠𝕟'𝕥 ℂ𝕙𝕒𝕟𝕘𝕖 𝔹𝕦𝕪 𝕎𝕙𝕖𝕟 𝔻𝕠𝕟𝕖 ✅️")
+            return glowMenu()
+        else
+            gg.alert("Process Canceled.")
+        end
+    else
+        gg.alert("𝔹𝕦𝕪 ℙ𝕒𝕣𝕥 ℕ𝕠𝕨")
+        gg.sleep(6000)
+        gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 𝔹𝕠𝕕𝕪 𝕂𝕚𝕥 𝕄𝕖𝕟𝕦')
+        waitForGG(bodyKitMenu)
+    end
+end
+
+function glowMenu()
+    while true do
+        local choice = gg.choice({
+            '𝔾𝕝𝕠𝕨 𝕎𝕚𝕟𝕘 𝔸𝕟𝕕 𝔾𝕝𝕠𝕨 ℝ𝕠𝕠𝕗✨', 
+            '𝕃𝕚𝕘𝕙𝕥𝕤 𝔸𝕟𝕕 𝔹𝕣𝕖𝕒𝕜𝕤 💡', 
+            'ℂ𝕙𝕣𝕠𝕞𝕖 ℝ𝕚𝕞𝕤🏅', 
+            '𝕄𝕒𝕥𝕥𝕖 ℝ𝕚𝕞𝕤 ♟️', 
+            'ℂ𝕙𝕣𝕠𝕞𝕖 𝔹𝕠𝕕𝕪 🚗', 
+            '𝕋𝕚𝕟𝕥 🎨', 
+            '❌️𝔹𝕒𝕔𝕜'
+        }, nil, '✨️𝔾𝕝𝕠𝕨 𝕄𝕖𝕟𝕦✨️')
+
+        if choice == nil or choice == 7 then
+        gg.toast('ℝ𝕖𝕥𝕦𝕣𝕟𝕚𝕟𝕘 𝕋𝕠 𝕄𝕒𝕚𝕟 𝕄𝕖𝕟𝕦...')
+        return mainMenu()
+   end
+        local actions = {
+            glowWingRoof, lightsBrakes, chromeRims, 
+            matteRims, chromeBody, tint
+        }
+        
+        if actions[choice] then actions[choice]() end
+
+        waitForGG(glowMenu)
+    end
+end
+
+function glowWingRoof()
+    gg.alert('𝕊𝕖𝕝𝕖𝕔𝕥 𝕋𝕙𝕖 𝕎𝕚𝕟𝕘 𝕆𝕣 ℝ𝕠𝕠𝕗 𝕐𝕠𝕦 𝕎𝕒𝕟𝕥 𝕋𝕠 𝔾𝕝𝕠𝕨')
+    gg.alert('ℂ𝕠𝕝𝕠𝕣 ℂ𝕠𝕕𝕖𝕤 \n ℝ𝕖𝕕 #𝔽𝔽𝟘𝟘𝟘𝟘, 𝕆𝕣𝕒𝕟𝕘𝕖 #𝔽𝔽𝟠𝔽𝟛𝔸, 𝕐𝕖𝕝𝕝𝕠𝕨 #𝔽𝔽𝔽𝔽𝟘𝟘, ℙ𝕚𝕟𝕜 #𝔽𝔽𝟘𝟘𝔽𝔽, ℙ𝕦𝕣𝕡𝕝𝕖 #𝔼𝔽𝟙𝔽𝔽𝔽, 𝔻𝕒𝕣𝕜 𝔹𝕝𝕦𝕖 #𝟚𝟚𝟚𝟚𝔽𝔽, 𝕃𝕚𝕘𝕙𝕥 𝔹𝕝𝕦𝕖 #𝟘𝟘𝔽𝔽𝔽𝔽, 𝔾𝕣𝕖𝕖𝕟 #𝟘𝟘𝔽𝔽𝟘𝟘, 𝕎𝕙𝕚𝕥𝕖 #𝔽𝔽𝔽𝔽𝔽𝔽')
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟚𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤...')
+    gg.sleep(25000)
+
+    gg.setRanges(gg.REGION_ANONYMOUS)
+
+    for i = 1, 9 do
+        gg.alert((i % 2 == 1) and "𝔼𝕟𝕥𝕖𝕣 ℂ𝕠𝕝𝕠𝕣 ℂ𝕠𝕕𝕖" or "𝕄𝕠𝕧𝕖 ℂ𝕠𝕝𝕠𝕣 𝕋𝕠 𝔹𝕝𝕒𝕔𝕜")
+        gg.sleep(5000)
+        gg.searchNumber((i % 2 == 1) and '1' or '0', gg.TYPE_FLOAT)
+        gg.getResults(100)
+    end
+
+    gg.editAll('8', gg.TYPE_FLOAT)
+    gg.alert('𝔾𝕝𝕠𝕨 𝔸𝕡𝕡𝕝𝕚𝕖𝕕✨️')
+
+    gg.clearResults()
+    gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 𝔾𝕝𝕠𝕨 𝕄𝕖𝕟𝕦....')
+    waitForGG(glowMenu)
+end
+
+function lightsBrakes()
+    gg.alert('𝔾𝕠 𝕋𝕠 ℍ𝕖𝕒𝕕𝕝𝕚𝕘𝕙𝕥𝕤 𝔹𝕣𝕖𝕒𝕜𝕤 𝔸𝕟𝕕 𝔼𝕟𝕥𝕖𝕣 ℂ𝕠𝕝𝕠𝕣 ℂ𝕠𝕕𝕖')
+    gg.alert('ℂ𝕠𝕝𝕠𝕣 ℂ𝕠𝕕𝕖𝕤 \n ℝ𝕖𝕕 #𝔽𝔽𝟘𝟘𝟘𝟘, 𝕆𝕣𝕒𝕟𝕘𝕖 #𝔽𝔽𝟠𝔽𝟛𝔸, 𝕐𝕖𝕝𝕝𝕠𝕨 #𝔽𝔽𝔽𝔽𝟘𝟘, ℙ𝕚𝕟𝕜 #𝔽𝔽𝟘𝟘𝔽𝔽, ℙ𝕦𝕣𝕡𝕝𝕖 #𝔼𝔽𝟙𝔽𝔽𝔽, 𝔻𝕒𝕣𝕜 𝔹𝕝𝕦𝕖 #𝟚𝟚𝟚𝟚𝔽𝔽, 𝕃𝕚𝕘𝕙𝕥 𝔹𝕝𝕦𝕖 #𝟘𝟘𝔽𝔽𝔽𝔽, 𝔾𝕣𝕖𝕖𝕟 #𝟘𝟘𝔽𝔽𝟘𝟘, 𝕎𝕙𝕚𝕥𝕖 #𝔽𝔽𝔽𝔽𝔽𝔽')
+    gg.toast('You have 25 Seconds...')
+    gg.sleep(25000)
+
+    gg.setRanges(gg.REGION_ANONYMOUS)
+
+    for i = 1, 9 do
+        gg.alert((i % 2 == 1) and "ENTER COLOR CODE" or "MOVE COLOR TO BLACK")
+        gg.sleep(5000)
+        gg.searchNumber((i % 2 == 1) and '1' or '0', gg.TYPE_FLOAT)
+        gg.getResults(100)
+    end
+
+    gg.editAll('100', gg.TYPE_FLOAT)
+    gg.alert('𝔾𝕝𝕠𝕨 𝔸𝕡𝕡𝕝𝕚𝕖𝕕✨️')
+
+    gg.clearResults()
+    gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 𝔾𝕝𝕠𝕨 𝕄𝕖𝕟𝕦')
+    waitForGG(glowMenu)
+end
+
+function chromeRims()
+    gg.alert('ℂ𝕙𝕠𝕠𝕤𝕖 ℝ𝕚𝕞𝕤 𝔸𝕟𝕕 𝔾𝕠 𝕋𝕠 𝕊𝕡𝕖𝕔𝕦𝕝𝕒𝕣 𝕋𝕙𝕖𝕟 𝕊𝕨𝕚𝕡𝕖 𝕦𝕡⬆️')
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟚𝟘 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+    gg.sleep(20000)
+
+    gg.setRanges(gg.REGION_ANONYMOUS)
+
+    for i = 1, 9 do
+        gg.alert((i % 2 == 1) and "𝕊𝕨𝕚𝕡𝕖 𝕌𝕡" or "𝕊𝕨𝕚𝕡𝕖 𝔻𝕠𝕨𝕟")
+        gg.sleep(5000)
+        gg.searchNumber((i % 2 == 1) and '1' or '0', gg.TYPE_FLOAT)
+        gg.getResults(100)
+    end
+
+    gg.editAll('-10', gg.TYPE_FLOAT)
+    gg.alert('ℂ𝕙𝕣𝕠𝕞𝕖 ℝ𝕚𝕞𝕤 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!')
+
+    gg.clearResults()
+    gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 𝔾𝕝𝕠𝕨 𝕄𝕖𝕟𝕦')
+    waitForGG(glowMenu)
+end
+
+function matteRims()
+    gg.alert('ℂ𝕙𝕠𝕠𝕤𝕖 ℝ𝕚𝕞𝕤, 𝕄𝕒𝕜𝕖 𝕄𝕒𝕚𝕟 ℂ𝕠𝕝𝕠𝕣 𝕎𝕙𝕚𝕥𝕖 𝔸𝕟𝕕 𝕊𝕡𝕖𝕔𝕦𝕝𝕒𝕣 𝔹𝕝𝕒𝕔𝕜 , 𝕋𝕙𝕖𝕟 𝔾𝕠 𝕋𝕠 ℝ𝕖𝕗𝕝𝕖𝕔𝕥𝕚𝕠𝕟 𝔸𝕟𝕕 𝕊𝕨𝕚𝕡𝕖 𝕌𝕡')
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟚𝟘 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+    gg.sleep(20000)
+
+    gg.setRanges(gg.REGION_ANONYMOUS)
+
+    for i = 1, 9 do
+        gg.alert((i % 2 == 1) and "𝕊𝕨𝕚𝕡𝕖 𝕌𝕡" or "𝕊𝕨𝕚𝕡𝕖 𝔻𝕠𝕨𝕟")
+        gg.sleep(5000)
+        gg.searchNumber((i % 2 == 1) and '1' or '0', gg.TYPE_FLOAT)
+        gg.getResults(100)
+    end
+
+    gg.editAll('-5', gg.TYPE_FLOAT)
+    gg.alert('𝕄𝕒𝕥𝕥𝕖 ℝ𝕚𝕞𝕤 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!')
+
+    gg.clearResults()
+    gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 𝔾𝕝𝕠𝕨 𝕄𝕖𝕟𝕦')
+    waitForGG(glowMenu)
+end
+
+function chromeBody()
+    gg.alert('𝔾𝕠 𝕋𝕠 ℂ𝕒𝕣 ℂ𝕠𝕝𝕠𝕣 𝕋𝕙𝕖𝕟 𝕊𝕖𝕝𝕖𝕔𝕥 𝕊𝕡𝕖𝕔𝕦𝕝𝕒𝕣 𝔸𝕟𝕕 𝕊𝕨𝕚𝕡𝕖 𝕌𝕡')
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟚𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+    gg.sleep(25000)
+
+    gg.setRanges(gg.REGION_ANONYMOUS)
+
+    for i = 1, 9 do
+        gg.alert((i % 2 == 1) and "𝕊𝕨𝕚𝕡𝕖 𝕌𝕡" or "𝕊𝕨𝕚𝕡𝕖 𝔻𝕠𝕨𝕟")
+        gg.sleep(5000)
+        gg.searchNumber((i % 2 == 1) and '1' or '0', gg.TYPE_FLOAT)
+        gg.getResults(100)
+    end
+
+    gg.editAll('-10', gg.TYPE_FLOAT)
+    gg.alert('ℂ𝕙𝕣𝕠𝕞𝕖 𝔹𝕠𝕕𝕪 𝔸𝕡𝕡𝕝𝕚𝕖𝕕!')
+
+    gg.clearResults()
+    gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 𝔾𝕝𝕠𝕨 𝕄𝕖𝕟𝕦')
+    waitForGG(glowMenu)
+end
+
+function tint()
+    gg.alert('𝔾𝕠 𝕋𝕠 𝕋𝕚𝕟𝕥 ℂ𝕠𝕝𝕠𝕣 𝔸𝕟𝕕 𝕊𝕖𝕥 𝔻𝕖𝕤𝕚𝕣𝕖𝕕 𝕋𝕚𝕟𝕥 𝔸𝕟𝕕 𝕃𝕠𝕨𝕖𝕣 𝕋𝕚𝕟𝕥 𝕃𝕖𝕧𝕖𝕝𝕤 ')
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟙𝟝 𝕊𝕖𝕔𝕠𝕟𝕕𝕤.....')
+    gg.sleep(15000)
+    gg.alert('𝔾𝕠 𝕋𝕠 𝔹𝕠𝕕𝕪 ℂ𝕠𝕝𝕠𝕣')
+
+    gg.setRanges(gg.REGION_CODE_APP)
+    gg.searchNumber('0.3', gg.TYPE_FLOAT)
+    gg.getResults(100)
+    gg.sleep(5000)
+    gg.editAll('3', gg.TYPE_FLOAT)
+    gg.alert('𝔾𝕠 𝕋𝕠 𝕋𝕚𝕟𝕥 𝕋𝕙𝕖𝕟 𝔾𝕠 𝕋𝕠 𝔸𝕟𝕠𝕥𝕙𝕖𝕣 ℂ𝕒𝕣 𝔸𝕟𝕕 𝕊𝕨𝕚𝕥𝕔𝕙 𝔹𝕒𝕔𝕜')
+
+    gg.clearResults()
+    gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 ℝ𝕖𝕥𝕦𝕣𝕟 𝕋𝕠 𝔾𝕝𝕠𝕨 𝕄𝕖𝕟𝕦')
+    waitForGG(glowMenu)
+end
+
+function raceMenu()
+    local ASEC = false
+    local BSEC = false
+    local CSEC = false
+    local DSEC = false
+    local lastSelected = 0
+
+    gg.setVisible(true)
+    repeat
+        repeat until gg.isVisible()
+        gg.setVisible(false)
+        
+        local choice = gg.choice({
+            "🥶 𝟙-𝟚 𝕊𝕖𝕔 𝔾𝕝𝕚𝕥𝕔𝕙  [" .. (ASEC and "✅ ON" or "❌ OFF") .. "]",
+            "🚀 𝟚-𝟛 𝕊𝕖𝕔 𝔾𝕝𝕚𝕥𝕔𝕙 [" .. (BSEC and "✅ ON" or "❌ OFF") .. "]",
+            "😎 𝟛-𝟜 𝕊𝕖𝕔 𝔾𝕝𝕚𝕥𝕔𝕙 [" .. (CSEC and "✅ ON" or "❌ OFF") .. "]",
+            "🚦 𝟜-𝟝 𝕊𝕖𝕔 𝔾𝕝𝕚𝕥𝕔𝕙 [" .. (DSEC and "✅ ON" or "❌ OFF") .. "]",
+            "❌️𝔼𝕩𝕚𝕥"
+        }, nil, "⚡️𝔾𝕝𝕚𝕥𝕔𝕙 ℝ𝕒𝕔𝕖 𝕄𝕖𝕟𝕦⚡️")
+
+        if choice == nil or choice == 5 then
+            gg.toast("ℝ𝕖𝕥𝕦𝕣𝕟𝕚𝕟𝕘 𝕋𝕠 𝕄𝕒𝕚𝕟 𝕄𝕖𝕟𝕦...")
+            return mainMenu()
+        else
+            lastSelected = choice
+        end
+
+        if choice == 1 then
+            if ASEC then
+                SC2()
+                ASEC = false
+            else
+                SC1()
+                ASEC = true
+            end
+        elseif choice == 2 then
+            if BSEC then
+                SC4()
+                BSEC = false
+            else
+                SC3()
+                BSEC = true
+            end
+        elseif choice == 3 then
+            if CSEC then
+                SC6()
+                CSEC = false
+            else
+                SC5()
+                CSEC = true
+            end
+        elseif choice == 4 then
+            if DSEC then
+                SC8()
+                DSEC = false
+            else
+                SC7()
+                DSEC = true
+            end
+        end
+
+        SC9()
+    until false
+end
+
+function SC1()
+gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.searchNumber("2500", gg.TYPE_FLOAT)
+    gg.getResults(999)
+    gg.editAll("-100000",  gg.TYPE_FLOAT)
+    gg.clearResults(100)
+    gg.setRanges(gg.REGION_CODE_APP)
+    gg.searchNumber("1.1", gg.TYPE_FLOAT)
+    gg.getResults(999)
+    gg.editAll("10",  gg.TYPE_FLOAT)
+    gg.clearResults(999)
+    gg.setRanges(gg.REGION_CODE_APP)
+    gg.searchNumber("10000000", gg.TYPE_FLOAT)
+    gg.getResults(999)
+    gg.editAll("3E-4",  gg.TYPE_FLOAT)
+    gg.toast("𝔸𝕔𝕥𝕚𝕧𝕖 ✅")
+    gg.clearResults()
+end
+
+function SC2()
+gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.searchNumber("-100000", gg.TYPE_FLOAT)
+    gg.getResults(999)
+    gg.editAll("2500",  gg.TYPE_FLOAT)
+    gg.clearResults(100)
+    gg.setRanges(gg.REGION_CODE_APP)
+    gg.searchNumber("10", gg.TYPE_FLOAT)
+    gg.getResults(999)
+    gg.editAll("1.1",  gg.TYPE_FLOAT)
+    gg.clearResults()
+    gg.setRanges(gg.REGION_CODE_APP)
+    gg.searchNumber("3E-4", gg.TYPE_FLOAT)
+    gg.getResults(999)
+    gg.editAll("10000000",  gg.TYPE_FLOAT)
+    gg.clearResults()
+    gg.toast("NON-ACTIVE❌")
+end
+
+function SC3()
+gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.searchNumber("2500", gg.TYPE_FLOAT)
+    gg.getResults(999)
+    gg.editAll("-100000",  gg.TYPE_FLOAT)
+    gg.clearResults(100)
+    gg.setRanges(gg.REGION_CODE_APP)
+    gg.searchNumber("1.1", gg.TYPE_FLOAT)
+    gg.getResults(999)
+    gg.editAll("3",  gg.TYPE_FLOAT)
+    gg.clearResults(100)
+    gg.setRanges(gg.REGION_CODE_APP)
+    gg.searchNumber("10000000", gg.TYPE_FLOAT)
+    gg.getResults(999)
+    gg.editAll("3E-4",  gg.TYPE_FLOAT)
+    gg.toast("𝔸𝕔𝕥𝕚𝕧𝕖 ✅")
+    gg.clearResults()
+end
+
+function SC4()
+gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.searchNumber("-100000", gg.TYPE_FLOAT)
+    gg.getResults(999)
+    gg.editAll("2500",  gg.TYPE_FLOAT)
+    gg.clearResults(100)
+    gg.setRanges(gg.REGION_CODE_APP)
+    gg.searchNumber("3", gg.TYPE_FLOAT)
+    gg.getResults(999)
+    gg.editAll("1.1",  gg.TYPE_FLOAT)
+    gg.clearResults(100)
+    gg.setRanges(gg.REGION_CODE_APP)
+    gg.searchNumber("3E-4", gg.TYPE_FLOAT)
+    gg.getResults(999)
+    gg.editAll("10000000",  gg.TYPE_FLOAT)
+    gg.clearResults()
+    gg.toast("NON-ACTIVE❌")
+end
+
+function SC5()
+gg.setVisible(false)
+  gg.clearResults()
+  gg.clearList()
+  gg.setRanges(gg.REGION_ANONYMOUS)
+  gg.searchNumber("2500", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+  gg.setVisible(false)
+  revert = gg.getResults(10000, nil, nil, nil, nil, nil, nil, nil, nil)
+  gg.editAll("-100000", gg.TYPE_FLOAT)
+  gg.clearResults(100)
+  gg.setRanges(gg.REGION_CODE_APP)
+  gg.searchNumber("1.1", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+  gg.setVisible(false)
+  revert = gg.getResults(10000, nil, nil, nil, nil, nil, nil, nil, nil)
+  gg.editAll("3", gg.TYPE_FLOAT)
+  gg.clearResults(100)
+  gg.setRanges(gg.REGION_CODE_APP)
+  gg.searchNumber("3.6", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+  gg.setVisible(false)
+  revert = gg.getResults(10000, nil, nil, nil, nil, nil, nil, nil, nil)
+  gg.editAll("925", gg.TYPE_FLOAT)
+  gg.clearResults(100)
+  gg.setRanges(gg.REGION_CODE_APP)
+  gg.searchNumber("10000000", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+  gg.setVisible(false)
+  revert = gg.getResults(10000, nil, nil, nil, nil, nil, nil, nil, nil)
+  gg.editAll("4E-4", gg.TYPE_FLOAT)
+  gg.toast("𝔸𝕔𝕥𝕚𝕧𝕖 ✅")
+  gg.clearResults()
+  gg.clearList()
+end 
+
+function SC6()
+gg.setVisible(false)
+  gg.clearResults()
+  gg.clearList()
+gg.setRanges(gg.REGION_ANONYMOUS)
+  gg.searchNumber("-100000", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+  gg.setVisible(false)
+  revert = gg.getResults(10000, nil, nil, nil, nil, nil, nil, nil, nil)
+  gg.editAll("2500", gg.TYPE_FLOAT)
+  gg.clearResults(100)
+  gg.setRanges(gg.REGION_CODE_APP)
+  gg.searchNumber("3", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+  gg.setVisible(false)
+  revert = gg.getResults(10000, nil, nil, nil, nil, nil, nil, nil, nil)
+  gg.editAll("1.1", gg.TYPE_FLOAT)
+  gg.clearResults(100)
+  gg.setRanges(gg.REGION_CODE_APP)
+  gg.searchNumber("925", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+  gg.setVisible(false)
+  revert = gg.getResults(10000, nil, nil, nil, nil, nil, nil, nil, nil)
+  gg.editAll("3.6", gg.TYPE_FLOAT)
+  gg.clearResults(100)
+  gg.setRanges(gg.REGION_CODE_APP)
+  gg.searchNumber("4E-4", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+  gg.setVisible(false)
+  revert = gg.getResults(10000, nil, nil, nil, nil, nil, nil, nil, nil)
+  gg.editAll("10000000", gg.TYPE_FLOAT)
+  gg.toast("NON-ACTIVE❌")
+  gg.clearResults()
+  gg.clearList()
+end 
+
+function SC7()
+gg.setVisible(false)
+  gg.clearResults()
+  gg.clearList()
+  gg.setRanges(gg.REGION_ANONYMOUS)
+  gg.searchNumber("2500", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+  gg.setVisible(false)
+  revert = gg.getResults(10000, nil, nil, nil, nil, nil, nil, nil, nil)
+  gg.editAll("-100000", gg.TYPE_FLOAT)
+  gg.clearResults(100)
+  gg.setRanges(gg.REGION_CODE_APP)
+  gg.searchNumber("3.6", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+  gg.setVisible(false)
+  revert = gg.getResults(10000, nil, nil, nil, nil, nil, nil, nil, nil)
+  gg.editAll("30", gg.TYPE_FLOAT)
+  gg.clearResults(100)
+  gg.setRanges(gg.REGION_CODE_APP)
+  gg.searchNumber("10000000", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+  gg.setVisible(false)
+  revert = gg.getResults(10000, nil, nil, nil, nil, nil, nil, nil, nil)
+  gg.editAll("4E-4", gg.TYPE_FLOAT)
+  gg.toast("𝔸𝕔𝕥𝕚𝕧𝕖 ✅")
+  gg.clearResults()
+  gg.clearList()
+end 
+
+function SC8()
+gg.setVisible(false)
+  gg.clearResults()
+  gg.clearList()
+  gg.setRanges(gg.REGION_ANONYMOUS)
+  gg.searchNumber("-100000", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+  gg.setVisible(false)
+  revert = gg.getResults(10000, nil, nil, nil, nil, nil, nil, nil, nil)
+  gg.editAll("2500", gg.TYPE_FLOAT)
+  gg.clearResults(100)
+  gg.setRanges(gg.REGION_CODE_APP)
+  gg.searchNumber("30", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+  gg.setVisible(false)
+  revert = gg.getResults(10000, nil, nil, nil, nil, nil, nil, nil, nil)
+  gg.editAll("3.6", gg.TYPE_FLOAT)
+  gg.clearResults(100)
+  gg.setRanges(gg.REGION_CODE_APP)
+  gg.searchNumber("4E-4", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+  gg.setVisible(false)
+  revert = gg.getResults(10000, nil, nil, nil, nil, nil, nil, nil, nil)
+  gg.editAll("10000000", gg.TYPE_FLOAT)
+  gg.toast("NON-ACTIVE❌")
+  gg.clearResults()
+  gg.clearList()
+end 
+
+function SC9()
+gg.setVisible(true)
+end
+
+function extrasMenu()
+        AD1()
+    end
+   
+
+on = " 🔴⃢  "
+off = "      ⃢🔵"
+MIL = on
+MIL1 = on 
+MIL2 = on
+MIL3 = on
+MIL4 = on
+MIL5 = on
+function AD1()
+    local lastSelected = 0
+    gg.setVisible(true)
+
+    repeat
+        until gg.isVisible()
+
+    gg.setVisible(false)
+
+    add1 = gg.choice({
+        "⚠️𝔾𝔾 𝔻𝕣𝕚𝕗𝕥"..MIL,
+        "💥𝔸𝕟𝕥𝕚 𝔻𝕒𝕞𝕒𝕘𝕖"..MIL1,
+        "🚘𝔸𝕟𝕥𝕚 ℂ𝕣𝕒𝕤𝕙"..MIL2,
+        "❌️𝔼𝕩𝕚𝕥 ",
+    }, nil, "🎁𝔼𝕩𝕥𝕣𝕒𝕤 𝕄𝕖𝕟𝕦🎁")
+
+    if add1 == nil then
+        gg.toast('ℝ𝕖𝕥𝕦𝕣𝕟𝕚𝕟𝕘 𝕋𝕠 𝕄𝕒𝕚𝕟 𝕄𝕖𝕟𝕦')
+        return mainMenu()
+    end
+
+    lastSelected = add1
+
+    if add1 == 1 then
+        if MIL == "on" then
+            Y7("on")
+            MIL = "off"
+        else
+            Y8("off")
+            MIL = "on"
+        end
+    end
+
+    if add1 == 2 then
+        if MIL1 == "on" then
+            Y9("on")
+            MIL1 = "off"
+        else
+            Y10("off")
+            MIL1 = "on"
+        end
+    end
+
+    if add1 == 3 then
+        if MIL2 == "on" then
+            Y11("on")
+            MIL2 = "off"
+        else
+            Y12("off")
+            MIL2 = "on"
+        end
+    end
+
+
+    if add1 == 4 then 
+        return Y13()
+    end
+
+    repeat until false
+end
+
+function Y13()
+    gg.setVisible(true)
+end
+
+
+function Y8()
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber("0.0001", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("30", gg.TYPE_FLOAT)
+gg.processResume()
+gg.toast("𝔸𝕔𝕥𝕚𝕧𝕖 ✅")
+end
+
+function Y7()
+gg.setRanges(gg.REGION_CODE_APP)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("0.0001", gg.TYPE_FLOAT)
+gg.processResume()
+gg.clearResults()
+gg.toast("NON-ACTIVE❌")
+end
+
+
+function Y10()
+gg.clearResults()
+gg.clearList()
+-- main code
+gg.setRanges(32)
+gg.searchNumber("0.40000000596F;5;0.10000000149F;1:13", 16)
+gg.refineNumber("5", 16)
+gg.getResults(9999)
+gg.editAll("1999", 16)
+gg.toast("𝔸𝕔𝕥𝕚𝕧𝕖 ✅")
+end
+
+
+function Y9()
+gg.setVisbile(true)
+end
+ 
+function Y12()
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber("10000000", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("3E-4", gg.TYPE_FLOAT)
+gg.processResume()
+gg.toast("𝔸𝕔𝕥𝕚𝕧𝕖 ✅")
+end
+
+function Y11()
+gg.setRanges(gg.REGION_CODE_APP)
+if revert ~= nil then gg.setValues(revert) end
+gg.processResume()
+gg.clearResults()
+gg.toast("NON-ACTIVE❌")
+end
+
+
+function unlockCrown()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("3;0;218;-1:13", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineNumber("218", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("0", gg.TYPE_DWORD)
+gg.processResume()
+gg.alert('👑𝔽𝕚𝕟𝕕 ℂ𝕣𝕠𝕨𝕟 ℂ𝕒𝕣 𝔸𝕟𝕕 𝔹𝕦𝕪👑')
+gg.toast("𝔻𝕠𝕟𝕖✅")
+end
+
+function wingRoofFinder()
+    gg.alert('𝕎𝕖𝕝𝕔𝕠𝕞𝕖 𝕋𝕠 ℂ𝕠𝕕𝕖 𝔽𝕚𝕟𝕕𝕖𝕣 𝕄𝕖𝕟𝕦 📝')
+    while true do
+        local choice = gg.choice({
+            '𝔽𝕚𝕟𝕕 ℝ𝕠𝕠𝕗 𝕀𝔻🏠', 
+            '𝔽𝕚𝕟𝕕 𝕎𝕚𝕟𝕘 𝕀𝔻 ✈️', 
+            '❌️𝔼𝕩𝕚𝕥'
+        }, nil, '📊ℂ𝕠𝕕𝕖 𝔽𝕚𝕟𝕕𝕖𝕣 𝕄𝕖𝕟𝕦📊')
+
+        if choice == nil or choice == 3 then 
+        gg.toast('ℝ𝕖𝕥𝕦𝕣𝕟𝕚𝕟𝕘 𝕋𝕠 𝕄𝕒𝕚𝕟 𝕄𝕖𝕟𝕦')
+        return mainMenu()
+   end
+
+        local actions = {findRoofID, findWingID}
+        if actions[choice] then actions[choice]() end
+
+        waitForGG() -- Ensures smooth return to menu
+    end
+end
+
+function findRoofID()
+    gg.alert('𝔾𝕠 𝕋𝕠 ℂ𝕒𝕣 𝕎𝕚𝕥𝕙 𝔹𝕠𝕕𝕪 𝕂𝕚𝕥 𝔸𝕟𝕕 𝔹𝕦𝕪 𝔹𝕦𝕞𝕡𝕖𝕣 #𝟙 𝕋𝕙𝕖𝕟 𝕊𝕖𝕝𝕖𝕔𝕥 ℕ𝕦𝕞𝕓𝕖𝕣 𝟚')
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟚𝟘 𝕊𝕖𝕔𝕠𝕟𝕕𝕤')
+    gg.sleep(20900)
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.searchNumber('1', gg.TYPE_DWORD)
+
+    gg.alert('ℂ𝕝𝕚𝕔𝕜 𝔹𝕦𝕞𝕡𝕖𝕣 #𝟛')
+    gg.sleep(5000)
+    gg.searchNumber('2', gg.TYPE_DWORD)
+
+    gg.alert('ℂ𝕝𝕚𝕔𝕜 𝔹𝕦𝕞𝕡𝕖𝕣 #𝟜')
+    gg.sleep(5000)
+    gg.searchNumber('3', gg.TYPE_DWORD)
+
+    gg.alert('ℕ𝕠𝕨 𝔾𝕠 𝕋𝕠 ℂ𝕒𝕣 𝕐𝕠𝕦 𝕎𝕒𝕟𝕥 ℝ𝕠𝕠𝕗 ℂ𝕠𝕕𝕖 𝔽𝕣𝕠𝕞')
+    gg.sleep(7000) -- Gives time to transition
+
+    gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔸 ℝ𝕠𝕠𝕗, 𝕋𝕙𝕖𝕟 ℂ𝕝𝕚𝕔𝕜 𝔾𝔾 𝕋𝕠 𝔾𝕖𝕥 ℂ𝕠𝕕𝕖')
+
+    while true do
+        if gg.isVisible(true) then
+            gg.setVisible(false)
+            gg.sleep(1000) -- Allows time to detect changes
+
+            local results = gg.getResults(5) -- Check the first 5 values
+            for _, v in ipairs(results) do
+                if v.value == -1 then
+                    gg.toast("ℝ𝕠𝕠𝕗 𝕀𝔻 𝕊𝕖𝕒𝕣𝕔𝕙 𝔼𝕟𝕕𝕖𝕕, ℝ𝕖𝕥𝕦𝕣𝕟𝕚𝕟𝕘 𝕋𝕠 𝕄𝕖𝕟𝕦....")
+                    gg.sleep(2000)
+                    return -- Exits function & goes back to menu
+                elseif v.value ~= 0 then
+                    gg.toast('Roof Code: ' .. tostring(v.value)) -- Display only the correct ID
+                    break -- Stops after finding the first valid result
+                end
+            end
+        end
+
+        gg.sleep(500) -- Wait before checking again
+    end
+end
+
+function findWingID()
+    gg.alert('𝔾𝕠 𝕋𝕠 ℂ𝕒𝕣 𝕎𝕚𝕥𝕙 𝔹𝕠𝕕𝕪 𝕂𝕚𝕥 𝔸𝕟𝕕 𝔹𝕦𝕪 𝔹𝕦𝕞𝕡𝕖𝕣 #𝟙 𝕋𝕙𝕖𝕟 𝕊𝕖𝕝𝕖𝕔𝕥 ℕ𝕦𝕞𝕓𝕖𝕣 𝟚')
+    gg.toast('𝕐𝕠𝕦 ℍ𝕒𝕧𝕖 𝟚𝟘 𝕊𝕖𝕔𝕠𝕟𝕕𝕤....')
+    gg.sleep(20000)
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.searchNumber('1', gg.TYPE_DWORD)
+
+    gg.alert('ℂ𝕝𝕚𝕔𝕜 𝔹𝕦𝕞𝕡𝕖𝕣 #𝟛')
+    gg.sleep(5000)
+    gg.searchNumber('2', gg.TYPE_DWORD)
+
+    gg.alert('ℂ𝕝𝕚𝕔𝕜 𝔹𝕦𝕞𝕡𝕖𝕣 #𝟜')
+    gg.sleep(5000)
+    gg.searchNumber('3', gg.TYPE_DWORD)
+
+    gg.alert('ℕ𝕠𝕨 𝔾𝕠 𝕋𝕠 ℂ𝕒𝕣 𝕐𝕠𝕦 𝕎𝕒𝕟𝕥 𝕊𝕡𝕠𝕚𝕝𝕖𝕣 ℂ𝕠𝕕𝕖 𝔽𝕣𝕠𝕞')
+    gg.sleep(7000) -- Gives time to transition
+
+    gg.toast('ℂ𝕝𝕚𝕔𝕜 𝔸 𝕎𝕚𝕟𝕘, 𝕋𝕙𝕖𝕟 𝕆𝕡𝕖𝕟 𝔾𝔾 𝕋𝕠 𝔾𝕖𝕥 ℂ𝕠𝕕𝕖')
+
+    while true do
+        if gg.isVisible(true) then
+            gg.setVisible(false)
+            gg.sleep(1000) -- Allows time to detect changes
+
+            local results = gg.getResults(5) -- Check the first 5 values
+            for _, v in ipairs(results) do
+                if v.value == -1 then
+                    gg.toast("𝕎𝕚𝕟𝕘 𝕀𝔻 𝕊𝕖𝕒𝕣𝕔𝕙 𝔼𝕟𝕕𝕖𝕕, ℝ𝕖𝕥𝕦𝕣𝕟𝕚𝕟𝕘 𝕋𝕠 𝕄𝕖𝕟𝕦.....")
+                    gg.sleep(2000)
+                    return -- Exits function & goes back to menu
+                elseif v.value ~= 0 then
+                    gg.toast('Spoiler Code: ' .. tostring(v.value)) -- Display only the correct ID
+                    break -- Stops after finding the first valid result
+                end
+            end
+        end
+
+        gg.sleep(500) -- Wait before checking again
+    end
+end
+
+function infoAlert()
+gg.alert('𝙄𝙁 𝙔𝙊𝙐 𝙀𝙉𝙅𝙊𝙔𝙀𝘿 𝙏𝙃𝙄𝙎 𝘾𝙊𝙉𝙎𝙄𝘿𝙀𝙍 𝙊𝙐𝙍 𝙋𝘼𝙄𝘿 𝙊𝙋𝙏𝙄𝙊𝙉. 𝙄𝙉𝘾𝙇𝙐𝘿𝙀𝙎 𝙏𝙃𝙄𝙉𝙂𝙎 𝙎𝙐𝘾𝙃 𝘼𝙎 𝘼𝘾𝙃𝙄𝙀𝙑𝙀𝙈𝙀𝙉𝙏𝙎, 𝙁𝙇𝙔𝙄𝙉𝙂 𝘾𝘼𝙍, 𝙈𝙊𝙉𝙎𝙏𝙀𝙍 𝙏𝙍𝙐𝘾𝙆 𝙇??𝙁𝙏 , 𝙎𝙀𝘾𝙍𝙀𝙏 𝘾𝘼𝙍 𝙑𝙄𝙀𝙒𝙀𝙍, 𝙁𝙐𝙇𝙇𝙔 𝘾𝙊𝙈𝙋𝙇𝙀𝙏𝙀 𝙈𝙀𝙉𝙐𝙎  𝘼𝙉𝘿 𝙈𝙐𝘾𝙃 𝙈𝙊𝙍𝙀!! 𝙃𝘼𝙋𝙋𝙔 𝙈𝙊𝘿𝘿𝙄𝙉𝙂 :)')
+gg.toast('ℝ𝔼𝕋𝕌ℝℕ𝕀ℕ𝔾 𝕋𝕆 𝕄𝔸𝕀ℕ 𝕄𝔼ℕ𝕌')
+return mainMenu()
+end
+
+function waitForGG(returnTo)
+
+while true do
+        if gg.isVisible(true) then
+            gg.setVisible(false)
+            if returnTo then
+                returnTo() -- Return to the correct menu
+            else
+                mainMenu() -- Default to Main Menu if nothing is passed
+            end
+            return -- Prevents infinite loop
+        end
+        gg.sleep(1000)
+    end
+end
+
+mainMenu()
+
+        
+        
+              
+        
+        
+        
+       
+        
+        
+        
+          
+        
+        
+       
+        
+        
+        
+         
+          
