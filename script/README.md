@@ -54,4 +54,10 @@ Released under the MIT License — see [LICENSE](https://github.com/ethanlabs101
 
 ## 🎥 Snapshots
 
+[cpm1](https://github.com/ethanlabs101/gameguardian-lua-script/blob/main/screenshots/cpm-gg1.jpg)
+[cpm2](https://github.com/ethanlabs101/gameguardian-lua-script/blob/main/screenshots/cpm-gg2.jpg)
+[cpm3](https://github.com/ethanlabs101/gameguardian-lua-script/blob/main/screenshots/cpm-gg3.jpg)
+[cpm4](https://github.com/ethanlabs101/gameguardian-lua-script/blob/main/screenshots/cpm-gg4.jpg)
+[cpm5](https://github.com/ethanlabs101/gameguardian-lua-script/blob/main/screenshots/cpm-gg5.jpg)
+
 
