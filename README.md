@@ -8,11 +8,16 @@ Welcome to my beginnings in Lua scripting and reverse engineering. This reposito
 
 ---
 
+## Status: Archived
+> *This project represents my early reverse engineering and scripting work. It is no longer maintained, but remains public for educational and historical purposes.*
+
 ## 💻 About
 
-This script marks my starting point in tool development, automation, and reverse engineering on mobile games. This shows practical Lua scripting, memory manipulation experiments, and my early approach to building custom tools.  
+This script marks my starting point in tool development, automation, and reverse engineering within mobile games. It demonstrates practical Lua scripting, memory experimentation, and my early approach to building structured custom tools.
 
--This script was created a few updates ago, functionality is not guaranteed. This repos purpose is to document my technical growth and achievements, as well as be a research resource for lua script developers.
+-The project was developed on a non-root Samsung device, without Frida or dump.cs access. Working under these constraints forced me to think differently, strategize more carefully, and develop alternative problem-solving approaches that later shaped how I design tools and systems.
+
+-This script was created a updates ago, functionality is not guaranteed. This repos purpose is to document my technical growth and achievements, as well as be a research resource for lua script developers.
 
 ---
 
@@ -43,7 +48,7 @@ This script marks my starting point in tool development, automation, and reverse
 
 ## 🌐 Modding Website
 
-I also maintain a modding website where I host scripts, tools, and resources for learning and experimentation.  
+I also developed a modding website where I host scripts, tools, and resources for learning and experimentation.  
 Check it out: [CPMGARAGESTUDIOS](https://cpmgarage.github.io/cpmgaragestudios/)  
 
 *Note: The site is still in development, mostly a old passion project but it gives a good idea of the tools and projects I’m working on.*
