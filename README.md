@@ -31,14 +31,14 @@ This script marks my starting point in tool development, automation, and reverse
 ---
 
 ## 📂 File Structure
--  README.md        # Readme page
--  /script          # Main Master Lua script
--  /first-script    # First script ever!
 -  /delta-script    # Group only script
--  ABOUT.md         # Basic Description / Help
--  LICENSE          # MIT License
+-  /first-script    # First script ever!
+-  /screenshots     # Pictures of Website & Script
+-  /script          # Main Master Lua script
 -  /templates       # GG Lua Templates
--  /screenshots     # Pictures of Website
+-  HELP.md          # Basic Description / Help
+-  LICENSE          # MIT License
+-  README.md        # Readme page
 
 ---
 
